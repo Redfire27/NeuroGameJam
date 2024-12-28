@@ -1,22 +1,167 @@
-[gd_scene load_steps=4 format=3 uid="uid://dn52mxcun7uhb"]
+[gd_scene load_steps=12 format=3 uid="uid://dn52mxcun7uhb"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_hslaf"]
+[ext_resource type="PackedScene" uid="uid://crnsj8oydsbyp" path="res://Assets/Magnifying Glass.gltf" id="2_0xty0"]
+[ext_resource type="Texture2D" uid="uid://dj2ni5xlsaury" path="res://Assets/Black.png" id="3_80pyn"]
+[ext_resource type="PackedScene" uid="uid://ddeudwx0qbaup" path="res://Assets/Magnifying Glass Frame.gltf" id="4_mhimr"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8ku84"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ilxrq"]
 points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
 
+[sub_resource type="Animation" id="Animation_crvdn"]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagnifyingGlass:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.505377, -0.389255, -0.412211)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MagnifyingGlass:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScreen:transparency")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MagnifyingGlass:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MagnifyingFrame:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_uyoq6"]
+resource_name = "Remnant_scene"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MagnifyingGlass:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.505377, -0.389255, -0.412211), Vector3(0.242345, -0.339934, -0.551875), Vector3(0.242345, -0.3241, -0.195978)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MagnifyingGlass:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.593412)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScreen:transparency")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.666667, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.0, 0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MagnifyingGlass:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 0.633333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MagnifyingFrame:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6, 0.633333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mxbix"]
+_data = {
+"RESET": SubResource("Animation_crvdn"),
+"Remnant_scene": SubResource("Animation_uyoq6")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qov4p"]
+albedo_texture = ExtResource("3_80pyn")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rtcj0"]
+
 [node name="Player" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00281668, 0.0051713, -0.0110138)
 lock_rotation = true
 contact_monitor = true
 max_contacts_reported = 1
 script = ExtResource("1_hslaf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.39039, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_8ku84")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.39039, 0)
 shape = SubResource("ConvexPolygonShape3D_ilxrq")
 
 [node name="TwistPivot" type="Node3D" parent="."]
@@ -24,3 +169,23 @@ shape = SubResource("ConvexPolygonShape3D_ilxrq")
 [node name="PitchPivot" type="Node3D" parent="TwistPivot"]
 
 [node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00398612, -5.96046e-08, -0.00130343)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TwistPivot/PitchPivot/Camera3D"]
+libraries = {
+"": SubResource("AnimationLibrary_mxbix")
+}
+
+[node name="MagnifyingGlass" parent="TwistPivot/PitchPivot/Camera3D" instance=ExtResource("2_0xty0")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.505377, -0.389255, -0.412211)
+
+[node name="BlackScreen" type="MeshInstance3D" parent="TwistPivot/PitchPivot/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0872644, -0.0141659, -0.148426)
+material_override = SubResource("StandardMaterial3D_qov4p")
+transparency = 1.0
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_rtcj0")
+
+[node name="MagnifyingFrame" parent="TwistPivot/PitchPivot/Camera3D" instance=ExtResource("4_mhimr")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.000927687, -0.77559, -0.225398)
+visible = false

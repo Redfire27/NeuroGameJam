@@ -1,5 +1,5 @@
 res://Scenes/player.tscn
-res://Scripts/player.gd
+res://Scripts/Player.gd
 res://Scenes/World.tscn
 res://Scenes/Level.tscn
-res://Scripts/Player.gd
+res://player.gdshader
