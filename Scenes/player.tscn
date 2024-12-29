@@ -161,7 +161,7 @@ visible = false
 mesh = SubResource("CapsuleMesh_8ku84")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.39039, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 0, -0.39039, 0)
 shape = SubResource("ConvexPolygonShape3D_ilxrq")
 
 [node name="TwistPivot" type="Node3D" parent="."]
@@ -195,7 +195,7 @@ visible = false
 player = NodePath("../..")
 
 [node name="CollisionShape3D" parent="TwistPivot/PlayerInteractor" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1.82629, 0, 0, 0, 7.66467, 0.00330305, -0.267697, -3.22543)
+transform = Transform3D(1, 0, 0, 0, 1.82629, 0, 0, 0, 2.62187, 0.00330305, -0.267697, -0.658568)
 shape = SubResource("BoxShape3D_y43v7")
 
 [editable path="TwistPivot/PlayerInteractor"]

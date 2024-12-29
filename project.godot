@@ -67,6 +67,7 @@ interact={
 [layer_names]
 
 3d_physics/layer_2="intractable"
+3d_physics/layer_3="Remnants"
 
 [rendering]
 

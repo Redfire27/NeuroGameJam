@@ -1,6 +1,6 @@
-res://Scenes/start_menu.tscn
 res://Scenes/Level.tscn
+res://Scenes/start_menu.tscn
 res://Scenes/player.tscn
+res://Scenes/door.tscn
+res://Scenes/Remnant.tscn
 res://Scenes/blinds.tscn
-res://Scripts/PlayerInteractor.gd
-res://Scripts/blinds.gd

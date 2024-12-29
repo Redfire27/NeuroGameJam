@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://v2hcq3ca47ev"]
+
+[ext_resource type="PackedScene" uid="uid://b85pcupthypb2" path="res://Assets/Remnant.gltf" id="1_ti253"]
+[ext_resource type="PackedScene" uid="uid://l6rmbw5ifftv" path="res://Scenes/Interactable.tscn" id="2_565bc"]
+[ext_resource type="Script" path="res://Scripts/remnant.gd" id="2_ib8se"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nnkbm"]
+size = Vector3(1, 1.07825, 1)
+
+[sub_resource type="Animation" id="Animation_ujy3g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0230047, 0, -0.190936)]
+}
+
+[sub_resource type="Animation" id="Animation_7sj02"]
+resource_name = "remnant_fly"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0230047, 0, -0.190936), Vector3(-0.0230047, 0.390743, -0.190936), Vector3(-0.023, 0, -0.191)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gano5"]
+_data = {
+"RESET": SubResource("Animation_ujy3g"),
+"remnant_fly": SubResource("Animation_7sj02")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Remnant" parent="." instance=ExtResource("1_ti253")]
+transform = Transform3D(-0.767197, 0, -0.00385065, 0, 0.70118, 0, 0.00368231, 0, -0.802271, -0.0230047, 0, -0.190936)
+script = ExtResource("2_ib8se")
+
+[node name="sphere" parent="Remnant/Node" index="0"]
+transform = Transform3D(0.992515, 0, 4.65661e-10, 0, 0.992515, 0, -4.65661e-10, 0, 0.992515, 0, 1.625, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Remnant/Node" index="3"]
+collision_layer = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Remnant/Node/RigidBody3D"]
+transform = Transform3D(1.47927, 0, -1.00857e-08, 0, 2.31713, 0, 0, 0, 1.4324, 0, 0.892562, 0.0575035)
+shape = SubResource("BoxShape3D_nnkbm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Remnant"]
+libraries = {
+"": SubResource("AnimationLibrary_gano5")
+}
+autoplay = "remnant_fly"
+speed_scale = 0.6
+
+[node name="Interactable" parent="Remnant" instance=ExtResource("2_565bc")]
+
+[node name="RemnantText" type="Label3D" parent="Remnant"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.47868, 0)
+visible = false
+text = "Zencigot severim"
+
+[editable path="Remnant"]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=14 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
 [ext_resource type="PackedScene" uid="uid://d16rbxedqhh8i" path="res://Assets/Floor 1.gltf" id="2_oh3hs"]
 [ext_resource type="PackedScene" uid="uid://dw77j61rktp44" path="res://Scenes/blinds.tscn" id="3_wpm86"]
+[ext_resource type="PackedScene" uid="uid://v2hcq3ca47ev" path="res://Scenes/Remnant.tscn" id="5_bf5lq"]
+[ext_resource type="PackedScene" uid="uid://c43ksc84ia0vv" path="res://Scenes/door.tscn" id="5_bsd0c"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -19,6 +21,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.05, 0.4522]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Remnant/Remnant/Node/RigidBody3D:collision_layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Remnant/Remnant:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_1j2ho"]
 length = 0.001
@@ -33,6 +59,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.05]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Remnant/Remnant/Node/RigidBody3D:collision_layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Remnant/Remnant:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yaxmb"]
@@ -89,10 +139,10 @@ transform = Transform3D(2.99369, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_qwi6s")
 
 [node name="Player" parent="." instance=ExtResource("1_jcsdg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -5.827)
 
 [node name="House" parent="." instance=ExtResource("2_oh3hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104985, 0.0190599, -14.2853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105, -0.0176165, -14.285)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.067963, 0.997688, 0, -0.997688, 0.067963, 0.95762, 2.86366, -13.1644)
@@ -108,3 +158,18 @@ spot_range = 7.23168
 
 [node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
 transform = Transform3D(-0.999971, 0, -0.00764449, 0, 1, 0, 0.00764449, 0, -0.999971, -0.454709, -0.00827742, -7.39978)
+
+[node name="Remnant" parent="." instance=ExtResource("5_bf5lq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15004, 0.0190599, -14.1432)
+
+[node name="Remnant" parent="Remnant" index="0"]
+visible = false
+
+[node name="RigidBody3D" parent="Remnant/Remnant/Node" index="3"]
+collision_layer = 4
+
+[node name="Door" parent="." instance=ExtResource("5_bsd0c")]
+transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -5.45792)
+
+[editable path="Remnant"]
+[editable path="Remnant/Remnant"]
