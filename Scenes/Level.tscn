@@ -100,5 +100,11 @@ light_color = Color(1, 0.677448, 0.137304, 1)
 light_energy = 3.0
 spot_range = 7.23168
 
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.067963, 0.997688, 0, -0.997688, 0.067963, 0.752466, 2.85632, -7.52038)
+light_color = Color(1, 0.677448, 0.137304, 1)
+light_energy = 3.0
+spot_range = 7.23168
+
 [node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99783, -0.00827742, -1.99603)
+transform = Transform3D(-0.999971, 0, -0.00764449, 0, 1, 0, 0.00764449, 0, -0.999971, -0.454709, -0.00827742, -7.39978)
