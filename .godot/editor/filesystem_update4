@@ -1,5 +1,9 @@
-res://Scenes/player.tscn
-res://Scripts/Player.gd
-res://Scenes/World.tscn
+res://Scenes/start_menu.tscn
+res://Scripts/Interactor.gd
 res://Scenes/Level.tscn
-res://player.gdshader
+res://Scenes/player.tscn
+res://Scenes/blinds.tscn
+res://Scenes/Interactable.tscn
+res://Scenes/Interactor.tscn
+res://Scripts/blinds.gd
+res://Scripts/PlayerInteractor.gd

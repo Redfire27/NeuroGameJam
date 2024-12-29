@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=12 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
 [ext_resource type="PackedScene" uid="uid://d16rbxedqhh8i" path="res://Assets/Floor 1.gltf" id="2_oh3hs"]
+[ext_resource type="PackedScene" uid="uid://dw77j61rktp44" path="res://Scenes/blinds.tscn" id="3_wpm86"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -59,7 +60,7 @@ glow_blend_mode = 0
 volumetric_fog_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_iauqo"]
-size = Vector2(10, 10)
+size = Vector2(30, 10)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qwi6s"]
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
@@ -84,17 +85,20 @@ mesh = SubResource("PlaneMesh_iauqo")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(2.99369, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_qwi6s")
 
 [node name="Player" parent="." instance=ExtResource("1_jcsdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 3)
-linear_damp = 3.0
 
-[node name="blockbench_export" parent="." instance=ExtResource("2_oh3hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0292306, 0, -10.7753)
+[node name="House" parent="." instance=ExtResource("2_oh3hs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104985, 0.0190599, -14.2853)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.067963, 0.997688, 0, -0.997688, 0.067963, 0.95762, 2.86366, -9.34179)
+transform = Transform3D(1, 0, 0, 0, 0.067963, 0.997688, 0, -0.997688, 0.067963, 0.95762, 2.86366, -13.1644)
 light_color = Color(1, 0.677448, 0.137304, 1)
 light_energy = 3.0
 spot_range = 7.23168
+
+[node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99783, -0.00827742, -1.99603)

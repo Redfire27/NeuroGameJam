@@ -1,22 +1,33 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735410916
+::res://::1735480106
 icon.svg::CompressedTexture2D::1494678140303143078::1735376844::1735390990::1::::<><>::
-::res://Assets/::1735414274
+::res://Assets/::1735476361
 Black.png::CompressedTexture2D::7847505062193285098::1735405402::1735405406::1::::<><>::
+Blinds.gltf::PackedScene::6277441840278129520::1735476360::1735476361::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png
+Blinds_0.png::CompressedTexture2D::8595339189154996627::1735476361::1735476361::1::::<><>::
 Floor 1.gltf::PackedScene::9049202885089175966::1735414274::1735414292::1::::<><>::uid://bj5v7xe8bcxtd::::res://Assets/Floor 1_0.png<>uid://1ad8hmah5kc7::::res://Assets/Floor 1_1.png<>uid://ivao2sueo4jc::::res://Assets/Floor 1_2.png<>uid://c48iv5j6oe2cd::::res://Assets/Floor 1_3.png<>uid://whgmaa8lsujh::::res://Assets/Floor 1_4.png<>uid://dmwl2rvl6xock::::res://Assets/Floor 1_5.png
-Magnifying Glass Frame.gltf::PackedScene::7379306982448195103::1735401183::1735401183::1::::<><>::uid://b74fws6fxla8::::res://Assets/Magnifying Glass Frame_0.png
-Magnifying Glass Frame_0.png::CompressedTexture2D::138019838263976373::1735401183::1735401183::1::::<><>::
-Magnifying Glass.gltf::PackedScene::5993999354043455363::1735401183::1735401183::1::::<><>::uid://nnf3ckogtkex::::res://Assets/Magnifying Glass_0.png
-Magnifying Glass_0.png::CompressedTexture2D::939645586429984383::1735401183::1735401183::1::::<><>::
 Floor 1_0.png::CompressedTexture2D::3081385027027320357::1735413809::1735414274::1::::<><>::
 Floor 1_1.png::CompressedTexture2D::1825151402977652076::1735413809::1735414274::1::::<><>::
 Floor 1_2.png::CompressedTexture2D::604889129905754200::1735413809::1735414274::1::::<><>::
 Floor 1_3.png::CompressedTexture2D::6876967127418387795::1735413810::1735414274::1::::<><>::
 Floor 1_4.png::CompressedTexture2D::1558990937313388009::1735413810::1735414274::1::::<><>::
 Floor 1_5.png::CompressedTexture2D::8047661514560851662::1735413810::1735414274::1::::<><>::
-::res://Scenes/::1735414148
-Level.tscn::PackedScene::7922035291347546183::1735414148::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://d16rbxedqhh8i::::res://Assets/Floor 1.gltf
-player.tscn::PackedScene::8135310351381094799::1735414148::0::1::::<><>::res://Scripts/Player.gd<>uid://crnsj8oydsbyp::::res://Assets/Magnifying Glass.gltf<>uid://dj2ni5xlsaury::::res://Assets/Black.png<>uid://ddeudwx0qbaup::::res://Assets/Magnifying Glass Frame.gltf
-World.tscn::PackedScene::1996307007177330409::1735414148::0::1::::<><>::
-::res://Scripts/::1735411529
-Player.gd::GDScript::-1::1735409845::0::1::::<>RigidBody3D<>::
+Magnifying Glass Frame.gltf::PackedScene::7379306982448195103::1735401183::1735401183::1::::<><>::uid://b74fws6fxla8::::res://Assets/Magnifying Glass Frame_0.png
+Magnifying Glass Frame_0.png::CompressedTexture2D::138019838263976373::1735401183::1735401183::1::::<><>::
+Magnifying Glass.gltf::PackedScene::5993999354043455363::1735401183::1735401183::1::::<><>::uid://nnf3ckogtkex::::res://Assets/Magnifying Glass_0.png
+Magnifying Glass_0.png::CompressedTexture2D::939645586429984383::1735401183::1735401183::1::::<><>::
+::res://Scenes/::1735480027
+blinds.tscn::PackedScene::8771437384334899339::1735480023::0::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png<>res://Scripts/blinds.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
+Interactable.tscn::PackedScene::837126696681101591::1735480024::0::1::::<><>::res://Scripts/Interactable.gd
+Interactor.tscn::PackedScene::1358336637271146032::1735480025::0::1::::<><>::res://Scripts/Interactor.gd
+Level.tscn::PackedScene::7922035291347546183::1735480026::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://d16rbxedqhh8i::::res://Assets/Floor 1.gltf<>uid://dw77j61rktp44::::res://Scenes/blinds.tscn
+player.tscn::PackedScene::8135310351381094799::1735480027::0::1::::<><>::res://Scripts/Player.gd<>uid://crnsj8oydsbyp::::res://Assets/Magnifying Glass.gltf<>uid://dj2ni5xlsaury::::res://Assets/Black.png<>uid://ddeudwx0qbaup::::res://Assets/Magnifying Glass Frame.gltf<>uid://c2nmpxynkpu4d::::res://Scenes/PlayerInteractor.tscn
+PlayerInteractor.tscn::PackedScene::6695533692954621413::1735474275::0::1::::<><>::uid://tl8uuqwxhp1y::::res://Scenes/Interactor.tscn<>res://Scripts/PlayerInteractor.gd
+start_menu.tscn::PackedScene::8340066979869947590::1735479342::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
+::res://Scripts/::1735480022
+blinds.gd::GDScript::-1::1735479342::0::1::::<>Node3D<>::
+Interactable.gd::GDScript::-1::1735478974::0::1::::Interactable<>Area3D<>::
+Interactor.gd::GDScript::-1::1735480022::0::1::::Interactor<>Area3D<>::
+Player.gd::GDScript::-1::1735475774::0::1::::<>CharacterBody3D<>::
+PlayerInteractor.gd::GDScript::-1::1735474224::0::1::::<>Interactor<>::
+start_menu.gd::GDScript::-1::1735467126::0::1::::<>CanvasLayer<>::

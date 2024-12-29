@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dn52mxcun7uhb"]
+[gd_scene load_steps=14 format=3 uid="uid://dn52mxcun7uhb"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_hslaf"]
 [ext_resource type="PackedScene" uid="uid://crnsj8oydsbyp" path="res://Assets/Magnifying Glass.gltf" id="2_0xty0"]
 [ext_resource type="Texture2D" uid="uid://dj2ni5xlsaury" path="res://Assets/Black.png" id="3_80pyn"]
 [ext_resource type="PackedScene" uid="uid://ddeudwx0qbaup" path="res://Assets/Magnifying Glass Frame.gltf" id="4_mhimr"]
+[ext_resource type="PackedScene" uid="uid://c2nmpxynkpu4d" path="res://Scenes/PlayerInteractor.tscn" id="5_p8pl2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8ku84"]
 
@@ -148,11 +149,10 @@ albedo_texture = ExtResource("3_80pyn")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rtcj0"]
 
-[node name="Player" type="RigidBody3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_y43v7"]
+
+[node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00281668, 0.0051713, -0.0110138)
-lock_rotation = true
-contact_monitor = true
-max_contacts_reported = 1
 script = ExtResource("1_hslaf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -170,6 +170,7 @@ shape = SubResource("ConvexPolygonShape3D_ilxrq")
 
 [node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00398612, -5.96046e-08, -0.00130343)
+current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TwistPivot/PitchPivot/Camera3D"]
 libraries = {
@@ -187,5 +188,14 @@ cast_shadow = 0
 mesh = SubResource("PlaneMesh_rtcj0")
 
 [node name="MagnifyingFrame" parent="TwistPivot/PitchPivot/Camera3D" instance=ExtResource("4_mhimr")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.000927687, -0.77559, -0.225398)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.000927687, -0.77559, -0.192983)
 visible = false
+
+[node name="PlayerInteractor" parent="TwistPivot" node_paths=PackedStringArray("player") instance=ExtResource("5_p8pl2")]
+player = NodePath("../..")
+
+[node name="CollisionShape3D" parent="TwistPivot/PlayerInteractor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1.82629, 0, 0, 0, 7.66467, 0.00330305, -0.267697, -3.22543)
+shape = SubResource("BoxShape3D_y43v7")
+
+[editable path="TwistPivot/PlayerInteractor"]
