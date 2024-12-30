@@ -1,8 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735557830
+::res://::1735562660
 icon.svg::CompressedTexture2D::1494678140303143078::1735376844::1735484477::1::::<><>::
-::res://Assets/::1735558389
-Bat.gltf::PackedScene::1024756690216862450::1735558388::1735558388::1::::<><>::uid://cqyd1qpxgjhh3::::res://Assets/Bat_0.png
+::res://Assets/::1735563080
+Bat.gltf::PackedScene::1024756690216862450::1735563048::1735558388::1::::<><>::uid://cqyd1qpxgjhh3::::res://Assets/Bat_0.png
+Bat_0.png::CompressedTexture2D::5945637377911044974::1735558388::1735558389::1::::<><>::
 Black.png::CompressedTexture2D::7847505062193285098::1735405402::1735484477::1::::<><>::
 Blinds.gltf::PackedScene::6277441840278129520::1735476360::1735484477::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png
 Blinds_0.png::CompressedTexture2D::8595339189154996627::1735476361::1735484477::1::::<><>::
@@ -10,6 +11,8 @@ Door.gltf::PackedScene::9185014445651652867::1735485861::1735485861::1::::<><>::
 Door_0.png::CompressedTexture2D::4735994191617627151::1735485861::1735485862::1::::<><>::
 Door_1.png::CompressedTexture2D::1339124275735083621::1735485861::1735485862::1::::<><>::
 Door_2.png::CompressedTexture2D::854389961652864286::1735485861::1735485862::1::::<><>::
+Evil.gltf::PackedScene::7441165133576386793::1735563080::1735563080::1::::<><>::uid://0kkpysy11prs::::res://Assets/Evil_0.png
+Floor 1 (1).gltf::PackedScene::7115673588188729531::1735563048::1735563050::1::::<><>::uid://bs5t1aoemnvb5::::res://Assets/Floor 1 (1)_0.png<>uid://q3cn6l0scivk::::res://Assets/Floor 1 (1)_1.png<>uid://cupu5t1f2ae68::::res://Assets/Floor 1 (1)_2.png<>uid://dp3t4gpo6yd5p::::res://Assets/Floor 1 (1)_3.png<>uid://06qa58knroi0::::res://Assets/Floor 1 (1)_4.png<>uid://bxjq16e2luapo::::res://Assets/Floor 1 (1)_5.png<>uid://cvjukv5eh5id6::::res://Assets/Floor 1 (1)_6.png<>uid://cuatoa37lcdej::::res://Assets/Floor 1 (1)_7.png<>uid://cn1sh43qe1bwm::::res://Assets/Floor 1 (1)_8.png<>uid://b442xg47du883::::res://Assets/Floor 1 (1)_9.png<>uid://d2mwawxqmwdht::::res://Assets/Floor 1 (1)_10.png<>uid://caq845rnkbiok::::res://Assets/Floor 1 (1)_11.png<>uid://cbgh5qloe6a3y::::res://Assets/Floor 1 (1)_12.png<>uid://b7urjmuf1bks2::::res://Assets/Floor 1 (1)_13.png<>uid://cosycvl8jila2::::res://Assets/Floor 1 (1)_14.png<>uid://c5o0cgt4nt5ex::::res://Assets/Floor 1 (1)_15.png<>uid://bqyw7w7a6upt0::::res://Assets/Floor 1 (1)_16.png<>uid://bevlkqhkfxdqw::::res://Assets/Floor 1 (1)_17.png<>uid://dfoutplujm7st::::res://Assets/Floor 1 (1)_18.png<>uid://cmps40qfrcay0::::res://Assets/Floor 1 (1)_19.png<>uid://f5upegrdqgng::::res://Assets/Floor 1 (1)_20.png<>uid://qv3p024lefjd::::res://Assets/Floor 1 (1)_21.png<>uid://d1qk58bdv0r7x::::res://Assets/Floor 1 (1)_22.png<>uid://c2xh3df30c02b::::res://Assets/Floor 1 (1)_23.png<>uid://b0tht8ng7brm8::::res://Assets/Floor 1 (1)_24.png<>uid://b26ky6vodts2b::::res://Assets/Floor 1 (1)_25.png
 Floor 1.gltf::PackedScene::9049202885089175966::1735414274::1735484477::1::::<><>::uid://bj5v7xe8bcxtd::::res://Assets/Floor 1_0.png<>uid://1ad8hmah5kc7::::res://Assets/Floor 1_1.png<>uid://ivao2sueo4jc::::res://Assets/Floor 1_2.png<>uid://c48iv5j6oe2cd::::res://Assets/Floor 1_3.png<>uid://whgmaa8lsujh::::res://Assets/Floor 1_4.png<>uid://dmwl2rvl6xock::::res://Assets/Floor 1_5.png
 Floor 1_0.png::CompressedTexture2D::3081385027027320357::1735413809::1735484477::1::::<><>::
 Floor 1_1.png::CompressedTexture2D::1825151402977652076::1735413809::1735484477::1::::<><>::
@@ -19,27 +22,55 @@ Floor 1_4.png::CompressedTexture2D::1558990937313388009::1735413810::1735484477:
 Floor 1_5.png::CompressedTexture2D::8047661514560851662::1735413810::1735484477::1::::<><>::
 Kitchenette Drawer.gltf::PackedScene::434741631735783222::1735485861::1735485861::1::::<><>::uid://tt2royjyjxp4::::res://Assets/Kitchenette Drawer_0.png
 Kitchenette Drawer_0.png::CompressedTexture2D::1374481696594408543::1735485861::1735485862::1::::<><>::
-Knife.gltf::PackedScene::4371173853742610324::1735558388::1735558389::1::::<><>::uid://bqbxois4qw0pc::::res://Assets/Knife_0.png
+Knife.gltf::PackedScene::4371173853742610324::1735563048::1735558389::1::::<><>::uid://bqbxois4qw0pc::::res://Assets/Knife_0.png
+Knife_0.png::CompressedTexture2D::3512928500937159604::1735558388::1735558389::1::::<><>::
 Magnifying Glass Frame.gltf::PackedScene::7379306982448195103::1735401183::1735484477::1::::<><>::uid://b74fws6fxla8::::res://Assets/Magnifying Glass Frame_0.png
 Magnifying Glass Frame_0.png::CompressedTexture2D::138019838263976373::1735401183::1735484477::1::::<><>::
 Magnifying Glass.gltf::PackedScene::5993999354043455363::1735401183::1735484477::1::::<><>::uid://nnf3ckogtkex::::res://Assets/Magnifying Glass_0.png
 Magnifying Glass_0.png::CompressedTexture2D::939645586429984383::1735401183::1735484477::1::::<><>::
-Pistol.gltf::PackedScene::248702123751584992::1735558388::1735558389::1::::<><>::uid://fllkflcxhlib::::res://Assets/Pistol_0.png
+Neuro sama.gltf::PackedScene::6487282414107707257::1735563080::1735563080::1::::<><>::uid://cclkri438qmig::::res://Assets/Neuro sama_0.png
+Pistol.gltf::PackedScene::248702123751584992::1735563048::1735558389::1::::<><>::uid://fllkflcxhlib::::res://Assets/Pistol_0.png
+Pistol_0.png::CompressedTexture2D::374338398075793509::1735558389::1735558389::1::::<><>::
 Remnant.gltf::PackedScene::4765499257361926985::1735485861::1735485862::1::::<><>::uid://brkp3aj0hoqkx::::res://Assets/Remnant_0.png
 Remnant_0.png::CompressedTexture2D::3601235575250132203::1735485861::1735485862::1::::<><>::
-Bat_0.png::CompressedTexture2D::5945637377911044974::1735558388::1735558389::1::::<><>::
-Knife_0.png::CompressedTexture2D::3512928500937159604::1735558388::1735558389::1::::<><>::
-Pistol_0.png::CompressedTexture2D::374338398075793509::1735558389::1735558389::1::::<><>::
-::res://Scenes/::1735546165
-blinds.tscn::PackedScene::8771437384334899339::1735544778::0::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png<>res://Scripts/blinds.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
-door.tscn::PackedScene::6866759881574361379::1735544778::0::1::::<><>::res://Scripts/door.gd<>uid://b8qferb16n4jr::::res://Assets/Door_0.png<>uid://tcxgfo22lhgv::::res://Assets/Door_1.png<>uid://mf4xbt3v60m1::::res://Assets/Door_2.png<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
+Floor 1 (1)_0.png::CompressedTexture2D::3712951277129142204::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_1.png::CompressedTexture2D::1180970371005219716::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_2.png::CompressedTexture2D::6208852858502054047::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_3.png::CompressedTexture2D::8271103032639904711::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_4.png::CompressedTexture2D::1819689900362387385::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_5.png::CompressedTexture2D::4020363025325489468::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_6.png::CompressedTexture2D::6266619830892568453::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_7.png::CompressedTexture2D::6177796908847320285::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_8.png::CompressedTexture2D::5740077129878321676::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_9.png::CompressedTexture2D::4483444897526477714::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_10.png::CompressedTexture2D::9080470327983833021::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_11.png::CompressedTexture2D::4807928462801946126::1735563048::1735563050::1::::<><>::
+Floor 1 (1)_12.png::CompressedTexture2D::4855895928324216840::1735563049::1735563050::1::::<><>::
+Floor 1 (1)_13.png::CompressedTexture2D::4674800157651770223::1735563049::1735563050::1::::<><>::
+Floor 1 (1)_14.png::CompressedTexture2D::5794105878800861175::1735563049::1735563050::1::::<><>::
+Floor 1 (1)_15.png::CompressedTexture2D::6908929807318147935::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_16.png::CompressedTexture2D::3560381372234547691::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_17.png::CompressedTexture2D::2711214587589143114::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_18.png::CompressedTexture2D::7540356633530169767::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_19.png::CompressedTexture2D::5647219189297124233::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_20.png::CompressedTexture2D::414116897715132456::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_21.png::CompressedTexture2D::1168101649875771001::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_22.png::CompressedTexture2D::9017864508458644947::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_23.png::CompressedTexture2D::6715896021734934875::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_24.png::CompressedTexture2D::4180825654673051525::1735563049::1735563051::1::::<><>::
+Floor 1 (1)_25.png::CompressedTexture2D::4346166862582831271::1735563049::1735563051::1::::<><>::
+Evil_0.png::CompressedTexture2D::1776000114820763136::1735563080::1735563081::1::::<><>::
+Neuro sama_0.png::CompressedTexture2D::4936565204684035478::1735563080::1735563081::1::::<><>::
+::res://Scenes/::1735561933
+blinds.tscn::PackedScene::8771437384334899339::1735561909::0::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png<>res://Scripts/blinds.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
+door.tscn::PackedScene::6866759881574361379::1735561909::0::1::::<><>::res://Scripts/door.gd<>uid://b8qferb16n4jr::::res://Assets/Door_0.png<>uid://tcxgfo22lhgv::::res://Assets/Door_1.png<>uid://mf4xbt3v60m1::::res://Assets/Door_2.png<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
 Interactable.tscn::PackedScene::837126696681101591::1735480473::0::1::::<><>::res://Scripts/Interactable.gd
 Interactor.tscn::PackedScene::1358336637271146032::1735480473::0::1::::<><>::res://Scripts/Interactor.gd
-Level.tscn::PackedScene::7922035291347546183::1735546165::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://d16rbxedqhh8i::::res://Assets/Floor 1.gltf<>uid://dw77j61rktp44::::res://Scenes/blinds.tscn<>uid://v2hcq3ca47ev::::res://Scenes/Remnant.tscn<>uid://c43ksc84ia0vv::::res://Scenes/door.tscn
-player.tscn::PackedScene::8135310351381094799::1735544778::0::1::::<><>::res://Scripts/Player.gd<>uid://crnsj8oydsbyp::::res://Assets/Magnifying Glass.gltf<>uid://dj2ni5xlsaury::::res://Assets/Black.png<>uid://ddeudwx0qbaup::::res://Assets/Magnifying Glass Frame.gltf<>uid://c2nmpxynkpu4d::::res://Scenes/PlayerInteractor.tscn
+Level.tscn::PackedScene::7922035291347546183::1735561933::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://d16rbxedqhh8i::::res://Assets/Floor 1.gltf<>uid://dw77j61rktp44::::res://Scenes/blinds.tscn<>uid://v2hcq3ca47ev::::res://Scenes/Remnant.tscn<>uid://c43ksc84ia0vv::::res://Scenes/door.tscn
+player.tscn::PackedScene::8135310351381094799::1735561909::0::1::::<><>::res://Scripts/Player.gd<>uid://crnsj8oydsbyp::::res://Assets/Magnifying Glass.gltf<>uid://dj2ni5xlsaury::::res://Assets/Black.png<>uid://ddeudwx0qbaup::::res://Assets/Magnifying Glass Frame.gltf<>uid://c2nmpxynkpu4d::::res://Scenes/PlayerInteractor.tscn
 PlayerInteractor.tscn::PackedScene::6695533692954621413::1735474275::0::1::::<><>::uid://tl8uuqwxhp1y::::res://Scenes/Interactor.tscn<>res://Scripts/PlayerInteractor.gd
-Remnant.tscn::PackedScene::1530133390015642821::1735544790::0::1::::<><>::uid://b85pcupthypb2::::res://Assets/Remnant.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/remnant.gd
-start_menu.tscn::PackedScene::8340066979869947590::1735544778::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
+Remnant.tscn::PackedScene::1530133390015642821::1735561909::0::1::::<><>::uid://b85pcupthypb2::::res://Assets/Remnant.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/remnant.gd
+start_menu.tscn::PackedScene::8340066979869947590::1735561909::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
 ::res://Scripts/::1735544777
 blinds.gd::GDScript::-1::1735484442::0::1::::<>Node3D<>::
 door.gd::GDScript::-1::1735497562::0::1::::<>Node3D<>::
