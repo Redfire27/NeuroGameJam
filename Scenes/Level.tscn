@@ -523,6 +523,7 @@ shape = SubResource("BoxShape3D_nktyt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -11.0828)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+process_mode = 3
 stream = ExtResource("2_ftlfw")
 
 [node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
