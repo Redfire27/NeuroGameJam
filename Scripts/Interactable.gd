@@ -22,8 +22,6 @@ func interact(interactor: Interactor) -> void:
 	if linked_interactable:
 		linked_interactable.lock()
 		
-	# Optionally, lock this interactable as well
-	lock()
 
 func lock() -> void:
 	is_locked = true

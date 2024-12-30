@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=16 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
 [ext_resource type="PackedScene" uid="uid://d16rbxedqhh8i" path="res://Assets/Floor 1.gltf" id="2_oh3hs"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://v2hcq3ca47ev" path="res://Scenes/Remnant.tscn" id="5_bf5lq"]
 [ext_resource type="PackedScene" uid="uid://c43ksc84ia0vv" path="res://Scenes/door.tscn" id="5_bsd0c"]
 [ext_resource type="Script" path="res://Scripts/option1.gd" id="6_0x8sa"]
+[ext_resource type="Script" path="res://Scripts/option2.gd" id="7_b0qfn"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -167,7 +168,7 @@ shape = SubResource("ConcavePolygonShape3D_qwi6s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -5.827)
 
 [node name="House" parent="." instance=ExtResource("2_oh3hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105, -0.0176165, -14.285)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0387563, -0.0332239, -14.3181)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.067963, 0.997688, 0, -0.997688, 0.067963, 0.95762, 2.86366, -13.1644)
@@ -203,11 +204,17 @@ transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00222, 0, 1.43328)
 script = ExtResource("6_0x8sa")
 
+[node name="Remnant" parent="Option1" index="0"]
+script = ExtResource("6_0x8sa")
+
 [node name="Interactable" parent="Option1/Remnant" index="2"]
 linked_interactable_path = NodePath("../../../Option2/Remnant/Interactable")
 
 [node name="Option2" parent="." instance=ExtResource("5_bf5lq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64789, 0.170198, 1.61352)
+
+[node name="Remnant" parent="Option2" index="0"]
+script = ExtResource("7_b0qfn")
 
 [node name="Interactable" parent="Option2/Remnant" index="2"]
 linked_interactable_path = NodePath("../../../Option1/Remnant/Interactable")

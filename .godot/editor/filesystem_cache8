@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735518535
+::res://::1735558488
 icon.svg::CompressedTexture2D::1494678140303143078::1735390319::1735499484::1::::<><>::
 ::res://Assets/::1735499485
 Black.png::CompressedTexture2D::7847505062193285098::1735483984::1735499484::1::::<><>::
@@ -24,24 +24,26 @@ Magnifying Glass.gltf::PackedScene::5993999354043455363::1735483984::1735499485:
 Magnifying Glass_0.png::CompressedTexture2D::939645586429984383::1735483984::1735499484::1::::<><>::
 Remnant.gltf::PackedScene::4765499257361926985::1735498927::1735499485::1::::<><>::uid://brkp3aj0hoqkx::::res://Assets/Remnant_0.png
 Remnant_0.png::CompressedTexture2D::3601235575250132203::1735498927::1735499484::1::::<><>::
-::res://Scenes/::1735518535
-blinds.tscn::PackedScene::8771437384334899339::1735518267::0::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png<>res://Scripts/blinds.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
-door.tscn::PackedScene::6866759881574361379::1735518267::0::1::::<><>::res://Scripts/door.gd<>uid://b8qferb16n4jr::::res://Assets/Door_0.png<>uid://tcxgfo22lhgv::::res://Assets/Door_1.png<>uid://mf4xbt3v60m1::::res://Assets/Door_2.png<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
+::res://Scenes/::1735560767
+blinds.tscn::PackedScene::8771437384334899339::1735560767::0::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png<>res://Scripts/blinds.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
+door.tscn::PackedScene::6866759881574361379::1735560767::0::1::::<><>::res://Scripts/door.gd<>uid://b8qferb16n4jr::::res://Assets/Door_0.png<>uid://tcxgfo22lhgv::::res://Assets/Door_1.png<>uid://mf4xbt3v60m1::::res://Assets/Door_2.png<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
 Interactable.tscn::PackedScene::837126696681101591::1735483989::0::1::::<><>::res://Scripts/Interactable.gd
 Interactor.tscn::PackedScene::1358336637271146032::1735483989::0::1::::<><>::res://Scripts/Interactor.gd
-Level.tscn::PackedScene::7922035291347546183::1735518537::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://d16rbxedqhh8i::::res://Assets/Floor 1.gltf<>uid://dw77j61rktp44::::res://Scenes/blinds.tscn<>uid://v2hcq3ca47ev::::res://Scenes/Remnant.tscn<>uid://c43ksc84ia0vv::::res://Scenes/door.tscn<>res://Scenes/option1.gd
-option1.gd::GDScript::-1::1735518265::0::1::::<>Node3D<>::
-player.tscn::PackedScene::8135310351381094799::1735518267::0::1::::<><>::res://Scripts/Player.gd<>uid://crnsj8oydsbyp::::res://Assets/Magnifying Glass.gltf<>uid://dj2ni5xlsaury::::res://Assets/Black.png<>uid://ddeudwx0qbaup::::res://Assets/Magnifying Glass Frame.gltf<>uid://c2nmpxynkpu4d::::res://Scenes/PlayerInteractor.tscn
+Level.tscn::PackedScene::7922035291347546183::1735560767::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://d16rbxedqhh8i::::res://Assets/Floor 1.gltf<>uid://dw77j61rktp44::::res://Scenes/blinds.tscn<>uid://v2hcq3ca47ev::::res://Scenes/Remnant.tscn<>uid://c43ksc84ia0vv::::res://Scenes/door.tscn<>res://Scripts/option1.gd<>res://Scripts/option2.gd
+player.tscn::PackedScene::8135310351381094799::1735560767::0::1::::<><>::res://Scripts/Player.gd<>uid://crnsj8oydsbyp::::res://Assets/Magnifying Glass.gltf<>uid://dj2ni5xlsaury::::res://Assets/Black.png<>uid://ddeudwx0qbaup::::res://Assets/Magnifying Glass Frame.gltf<>uid://c2nmpxynkpu4d::::res://Scenes/PlayerInteractor.tscn
 PlayerInteractor.tscn::PackedScene::6695533692954621413::1735483989::0::1::::<><>::uid://tl8uuqwxhp1y::::res://Scenes/Interactor.tscn<>res://Scripts/PlayerInteractor.gd
-Remnant.tscn::PackedScene::1530133390015642821::1735518267::0::1::::<><>::uid://b85pcupthypb2::::res://Assets/Remnant.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/remnant.gd
-start_menu.tscn::PackedScene::8340066979869947590::1735518267::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
-::res://Scripts/::1735518535
+Remnant.tscn::PackedScene::1530133390015642821::1735560767::0::1::::<><>::uid://b85pcupthypb2::::res://Assets/Remnant.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/remnant.gd
+Lose.tscn::PackedScene::747514977291166952::1735560909::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
+start_menu.tscn::PackedScene::8340066979869947590::1735560767::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
+victory.tscn::PackedScene::3674885054242228297::1735560767::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
+::res://Scripts/::1735560766
 blinds.gd::GDScript::-1::1735502911::0::1::::<>Node3D<>::
 door.gd::GDScript::-1::1735498927::0::1::::<>Node3D<>::
-Interactable.gd::GDScript::-1::1735503691::0::1::::Interactable<>Area3D<>::
+Interactable.gd::GDScript::-1::1735560668::0::1::::Interactable<>Area3D<>::
 Interactor.gd::GDScript::-1::1735483989::0::1::::Interactor<>Area3D<>::
-option2.gd::GDScript::-1::1735518256::0::1::::<>Node3D<>::
-Player.gd::GDScript::-1::1735483989::0::1::::<>CharacterBody3D<>::
+option1.gd::GDScript::-1::1735560766::0::1::::<>Node3D<>::
+option2.gd::GDScript::-1::1735560728::0::1::::<>Node3D<>::
+Player.gd::GDScript::-1::1735558518::0::1::::<>CharacterBody3D<>::
 PlayerInteractor.gd::GDScript::-1::1735507365::0::1::::<>Interactor<>::
 remnant.gd::GDScript::-1::1735504326::0::1::::<>Node3D<>::
 remnant_option_choose.gd::GDScript::-1::1735501958::0::1::::<>Node3D<>::
