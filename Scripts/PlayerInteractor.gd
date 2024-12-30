@@ -25,3 +25,4 @@ func _input(event: InputEvent) -> void:
 func _on_area_exited(area: Interactable) -> void:
 	if cached_closest == area:
 		unfocus(area)
+		

@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=15 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
 [ext_resource type="PackedScene" uid="uid://d16rbxedqhh8i" path="res://Assets/Floor 1.gltf" id="2_oh3hs"]
 [ext_resource type="PackedScene" uid="uid://dw77j61rktp44" path="res://Scenes/blinds.tscn" id="3_wpm86"]
 [ext_resource type="PackedScene" uid="uid://v2hcq3ca47ev" path="res://Scenes/Remnant.tscn" id="5_bf5lq"]
 [ext_resource type="PackedScene" uid="uid://c43ksc84ia0vv" path="res://Scenes/door.tscn" id="5_bsd0c"]
+[ext_resource type="Script" path="res://Scripts/option1.gd" id="6_0x8sa"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -45,6 +46,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Remnant/Remnant/Interactable:collision_layer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
 
 [sub_resource type="Animation" id="Animation_1j2ho"]
 length = 0.001
@@ -83,6 +96,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Remnant/Remnant/Interactable:collision_layer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yaxmb"]
@@ -168,8 +193,29 @@ visible = false
 [node name="RigidBody3D" parent="Remnant/Remnant/Node" index="3"]
 collision_layer = 4
 
+[node name="Interactable" parent="Remnant/Remnant" index="2"]
+collision_layer = 0
+
 [node name="Door" parent="." instance=ExtResource("5_bsd0c")]
 transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -5.45792)
 
+[node name="Option1" parent="." instance=ExtResource("5_bf5lq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00222, 0, 1.43328)
+script = ExtResource("6_0x8sa")
+
+[node name="Interactable" parent="Option1/Remnant" index="2"]
+linked_interactable_path = NodePath("../../../Option2/Remnant/Interactable")
+
+[node name="Option2" parent="." instance=ExtResource("5_bf5lq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64789, 0.170198, 1.61352)
+
+[node name="Interactable" parent="Option2/Remnant" index="2"]
+linked_interactable_path = NodePath("../../../Option1/Remnant/Interactable")
+
 [editable path="Remnant"]
 [editable path="Remnant/Remnant"]
+[editable path="Remnant/Remnant/Interactable"]
+[editable path="Option1"]
+[editable path="Option1/Remnant"]
+[editable path="Option2"]
+[editable path="Option2/Remnant"]

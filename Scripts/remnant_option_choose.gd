@@ -15,9 +15,12 @@ func _on_interactable_interacted(interactor: Interactor) -> void:
 
 # Play the open animation
 func open() -> void:
-	remnant_text.visible = not remnant_text.visible
+	pass
 
 # Play the close animation
 func close() -> void:
-	remnant_text.visible = not remnant_text.visible
+	pass
 	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("interact"):
+		remnant_text.visible = not remnant_text.visible

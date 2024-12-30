@@ -75,4 +75,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.4
 visible = false
 text = "Zencigot severim"
 
+[connection signal="interacted" from="Remnant/Interactable" to="Remnant" method="_on_interactable_interacted"]
+
 [editable path="Remnant"]
