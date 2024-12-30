@@ -1,6 +1,7 @@
-[gd_scene load_steps=37 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=38 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
+[ext_resource type="AudioStream" uid="uid://b2uljwkkvotvv" path="res://Music/Ambience.wav" id="2_ftlfw"]
 [ext_resource type="PackedScene" uid="uid://dw77j61rktp44" path="res://Scenes/blinds.tscn" id="3_wpm86"]
 [ext_resource type="PackedScene" uid="uid://v2hcq3ca47ev" path="res://Scenes/Remnant.tscn" id="5_bf5lq"]
 [ext_resource type="PackedScene" uid="uid://c43ksc84ia0vv" path="res://Scenes/door.tscn" id="5_bsd0c"]
@@ -19,7 +20,7 @@
 [ext_resource type="Script" path="res://Scripts/neuro_sama_blame.gd" id="15_n1c4j"]
 [ext_resource type="PackedScene" path="res://Scenes/bat_true.tscn" id="16_2bx5g"]
 [ext_resource type="PackedScene" uid="uid://not23y0r5l8w" path="res://Scenes/Knife.tscn" id="17_db1bj"]
-[ext_resource type="PackedScene" path="res://Scenes/Bat.tscn" id="18_dof6e"]
+[ext_resource type="PackedScene" uid="uid://t4pyo5nphyl2" path="res://Scenes/Bat.tscn" id="18_dof6e"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -187,6 +188,18 @@ tracks/13/path = NodePath("Remnant4:visible")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("evil_blame:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
 "times": PackedFloat32Array(0.59, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -363,6 +376,18 @@ tracks/13/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("evil_blame:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yaxmb"]
 _data = {
@@ -496,6 +521,9 @@ shape = SubResource("BoxShape3D_nktyt")
 
 [node name="Player" parent="." instance=ExtResource("1_jcsdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -11.0828)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("2_ftlfw")
 
 [node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
 transform = Transform3D(-0.999971, 0, -0.00764449, 0, 1, 0, 0.00764449, 0, -0.999971, -0.454709, -0.00827742, -12.3887)
@@ -711,6 +739,7 @@ transform = Transform3D(0.503988, 0, 0.272411, 0, 0.687, 0, -0.270519, 0, 0.5075
 
 [node name="evil_blame" parent="." instance=ExtResource("13_sxrmx")]
 transform = Transform3D(0.503988, 0, 0.272411, 0, 0.687, 0, -0.270519, 0, 0.507512, 0.0425127, 0.0197466, -17.1686)
+visible = false
 
 [node name="Evil" parent="evil_blame" index="0"]
 transform = Transform3D(0.38654, 0, 0.722181, 0, 0.684464, 0, -0.604578, 0, 0.46173, 13.5793, 0, -5.42405)

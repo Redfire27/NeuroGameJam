@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735572600
+::res://::1735575032
 icon.svg::CompressedTexture2D::1494678140303143078::1735390319::1735564830::1::::<><>::
 ::res://Assets/::1735572647
 Bat.gltf::PackedScene::1024756690216862450::1735562030::1735564831::1::::<><>::uid://cej3mcrqv55gs::::res://Assets/Bat_0.png
@@ -63,7 +63,11 @@ Pistol.gltf::PackedScene::248702123751584992::1735562030::1735564831::1::::<><>:
 Pistol_0.png::CompressedTexture2D::374338398075793509::1735562030::1735564830::1::::<><>::
 Remnant.gltf::PackedScene::4765499257361926985::1735498927::1735564831::1::::<><>::uid://brkp3aj0hoqkx::::res://Assets/Remnant_0.png
 Remnant_0.png::CompressedTexture2D::3601235575250132203::1735498927::1735564830::1::::<><>::
-::res://Scenes/::1735574424
+::res://Music/::1735575140
+Ambience.wav::AudioStreamWAV::4323492147511483691::1735575135::1735575135::1::::<><>::
+Footsteps.wav::AudioStreamWAV::6415484279205407794::1735575140::1735575140::1::::<><>::
+Rising Tensions.wav::AudioStreamWAV::6157290840026672001::1735575125::1735575125::1::::<><>::
+::res://Scenes/::1735574849
 Bat.tscn::PackedScene::1394409380217606585::1735573335::0::1::::<><>::uid://ounufqb5aec5::::res://Assets/Bat.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/bat.gd
 bat_true.tscn::PackedScene::-1::1735572611::0::1::::<><>::
 blinds.tscn::PackedScene::8771437384334899339::1735560943::0::1::::<><>::uid://dupv8lvqyknrn::::res://Assets/Blinds_0.png<>res://Scripts/blinds.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn
@@ -72,22 +76,23 @@ Evil.tscn::PackedScene::-1::1735572608::0::1::::<><>::
 Interactable.tscn::PackedScene::837126696681101591::1735483989::0::1::::<><>::res://Scripts/Interactable.gd
 Interactor.tscn::PackedScene::1358336637271146032::1735483989::0::1::::<><>::res://Scripts/Interactor.gd
 Knife.tscn::PackedScene::942559604038159172::1735572587::0::1::::<><>::uid://b3jouhrpk56ku::::res://Assets/Knife.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/knife.gd
-Level.tscn::PackedScene::7922035291347546183::1735574487::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://dw77j61rktp44::::res://Scenes/blinds.tscn<>uid://v2hcq3ca47ev::::res://Scenes/Remnant.tscn<>uid://c43ksc84ia0vv::::res://Scenes/door.tscn<>uid://c8m5dswy3ehfv::::res://Assets/Floor 1 (1).gltf<>res://Scripts/bath.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>uid://ounufqb5aec5::::res://Assets/Bat.gltf<>uid://b3jouhrpk56ku::::res://Assets/Knife.gltf<>uid://dsqc8kxvq3uy::::res://Assets/Pistol.gltf<>res://Scripts/pistol.gd<>uid://duyauwwittyo2::::res://Assets/Pedestal.gltf<>res://Scenes/Evil.tscn<>uid://c0jiysf2nvq16::::res://Scenes/Neuro.tscn<>uid://dr1mikei7v60r::::res://Scenes/Pistol.tscn<>res://Scripts/neuro_sama_blame.gd<>res://Scenes/bat_true.tscn<>uid://not23y0r5l8w::::res://Scenes/Knife.tscn<>uid://t4pyo5nphyl2::::res://Scenes/Bat.tscn
+Level.tscn::PackedScene::7922035291347546183::1735574849::0::1::::<><>::uid://dn52mxcun7uhb::::res://Scenes/player.tscn<>uid://dw77j61rktp44::::res://Scenes/blinds.tscn<>uid://v2hcq3ca47ev::::res://Scenes/Remnant.tscn<>uid://c43ksc84ia0vv::::res://Scenes/door.tscn<>uid://c8m5dswy3ehfv::::res://Assets/Floor 1 (1).gltf<>res://Scripts/bath.gd<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>uid://ounufqb5aec5::::res://Assets/Bat.gltf<>uid://b3jouhrpk56ku::::res://Assets/Knife.gltf<>uid://dsqc8kxvq3uy::::res://Assets/Pistol.gltf<>res://Scripts/pistol.gd<>uid://duyauwwittyo2::::res://Assets/Pedestal.gltf<>res://Scenes/Evil.tscn<>uid://c0jiysf2nvq16::::res://Scenes/Neuro.tscn<>res://Scripts/evil_blame.gd<>uid://dr1mikei7v60r::::res://Scenes/Pistol.tscn<>res://Scripts/neuro_sama_blame.gd<>res://Scenes/bat_true.tscn<>uid://not23y0r5l8w::::res://Scenes/Knife.tscn<>res://Scenes/Bat.tscn
 Lose.tscn::PackedScene::747514977291166952::1735560944::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
 Neuro.tscn::PackedScene::6546671407508697195::1735572488::0::1::::<><>::uid://cyoqugfe7w7td::::res://Assets/Neuro sama.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/neuro_sama.gd
 Pistol.tscn::PackedScene::8406889636615671943::1735572485::0::1::::<><>::uid://dsqc8kxvq3uy::::res://Assets/Pistol.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/pistol.gd
 player.tscn::PackedScene::8135310351381094799::1735560943::0::1::::<><>::res://Scripts/Player.gd<>uid://crnsj8oydsbyp::::res://Assets/Magnifying Glass.gltf<>uid://dj2ni5xlsaury::::res://Assets/Black.png<>uid://ddeudwx0qbaup::::res://Assets/Magnifying Glass Frame.gltf<>uid://c2nmpxynkpu4d::::res://Scenes/PlayerInteractor.tscn
 PlayerInteractor.tscn::PackedScene::6695533692954621413::1735483989::0::1::::<><>::uid://tl8uuqwxhp1y::::res://Scenes/Interactor.tscn<>res://Scripts/PlayerInteractor.gd
 Remnant.tscn::PackedScene::1530133390015642821::1735560943::0::1::::<><>::uid://b85pcupthypb2::::res://Assets/Remnant.gltf<>uid://l6rmbw5ifftv::::res://Scenes/Interactable.tscn<>res://Scripts/remnant.gd
-start_menu.tscn::PackedScene::8340066979869947590::1735574424::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
+start_menu.tscn::PackedScene::8340066979869947590::1735574849::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
 victory.tscn::PackedScene::3674885054242228297::1735560943::0::1::::<><>::res://Scripts/start_menu.gd<>uid://dk4q078mm71r4::::res://Scenes/Level.tscn
-::res://Scripts/::1735574422
+::res://Scripts/::1735574545
 bat.gd::GDScript::-1::1735572475::0::1::::<>Node3D<>::
 bath.gd::GDScript::-1::1735573546::0::1::::<>Node3D<>::
 bat_true.gd::GDScript::-1::1735572473::0::1::::<>Node3D<>::
 blinds.gd::GDScript::-1::1735573546::0::1::::<>Node3D<>::
 door.gd::GDScript::-1::1735573546::0::1::::<>Node3D<>::
 evil.gd::GDScript::-1::1735573546::0::1::::<>Node3D<>::
+evil_blame.gd::GDScript::-1::1735574545::0::1::::<>Node3D<>::
 Interactable.gd::GDScript::-1::1735573546::0::1::::Interactable<>Area3D<>::
 Interactor.gd::GDScript::-1::1735483989::0::1::::Interactor<>Area3D<>::
 knife.gd::GDScript::-1::1735572468::0::1::::<>Node3D<>::

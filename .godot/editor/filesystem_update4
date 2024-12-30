@@ -13,3 +13,4 @@ res://Scenes/start_menu.tscn
 res://Scripts/neuro_sama.gd
 res://Scripts/neuro_sama_blame.gd
 res://Scripts/evil_blame.gd
+res://default_bus_layout.tres
