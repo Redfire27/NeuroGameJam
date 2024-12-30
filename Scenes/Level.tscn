@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
-[ext_resource type="PackedScene" uid="uid://d16rbxedqhh8i" path="res://Assets/Floor 1.gltf" id="2_oh3hs"]
 [ext_resource type="PackedScene" uid="uid://dw77j61rktp44" path="res://Scenes/blinds.tscn" id="3_wpm86"]
 [ext_resource type="PackedScene" uid="uid://v2hcq3ca47ev" path="res://Scenes/Remnant.tscn" id="5_bf5lq"]
 [ext_resource type="PackedScene" uid="uid://c43ksc84ia0vv" path="res://Scenes/door.tscn" id="5_bsd0c"]
+[ext_resource type="PackedScene" uid="uid://c8m5dswy3ehfv" path="res://Assets/Floor 1 (1).gltf" id="5_i571d"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -172,7 +172,7 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0179369, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017561, 0.0197468, 0.104521)
 mesh = SubResource("PlaneMesh_iauqo")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
@@ -223,7 +223,7 @@ mesh = SubResource("PlaneMesh_thw14")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D4/StaticBody3D"]
-transform = Transform3D(1.97001, -1.16415e-10, -4.36557e-11, 0, 1.00021, -5.21541e-08, 2.29193e-10, 1.07102e-08, 1.2713, 2.38419e-07, 0, 0.192448)
+transform = Transform3D(2.30437, -2.91038e-11, -4.00178e-11, 7.45058e-09, 0.233603, -5.21541e-08, 2.76486e-10, 2.59024e-09, 1.28042, 1.19209e-07, 0, 0.192448)
 shape = SubResource("BoxShape3D_3ebg7")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D"]
@@ -234,32 +234,17 @@ mesh = SubResource("PlaneMesh_thw14")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D5"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D5/StaticBody3D"]
-transform = Transform3D(1.66526, -2.91038e-11, -1.49157e-10, -1.86265e-09, 1.00817, 1.78814e-07, 3.63798e-12, 1.14087e-08, 2.0454, -0.238281, 1.90735e-06, 0)
+transform = Transform3D(2.64449, -5.82077e-11, -1.49157e-10, 0, 1.00675, 1.86265e-07, 1.45519e-11, 1.17579e-08, 2.04543, -0.238281, 1.90735e-06, -1.49012e-08)
 shape = SubResource("BoxShape3D_nktyt")
 
 [node name="Player" parent="." instance=ExtResource("1_jcsdg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -5.827)
-
-[node name="House" parent="." instance=ExtResource("2_oh3hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105, -0.0176165, -14.285)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.067963, 0.997688, 0, -0.997688, 0.067963, 0.95762, 2.86366, -13.1644)
-light_color = Color(1, 0.677448, 0.137304, 1)
-light_energy = 3.0
-spot_range = 7.23168
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.067963, 0.997688, 0, -0.997688, 0.067963, 0.752466, 2.85632, -7.52038)
-light_color = Color(1, 0.677448, 0.137304, 1)
-light_energy = 3.0
-spot_range = 7.23168
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -11.0828)
 
 [node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
-transform = Transform3D(-0.999971, 0, -0.00764449, 0, 1, 0, 0.00764449, 0, -0.999971, -0.454709, -0.00827742, -7.39978)
+transform = Transform3D(-0.999971, 0, -0.00764449, 0, 1, 0, 0.00764449, 0, -0.999971, -0.454709, -0.00827742, -12.3887)
 
 [node name="Remnant" parent="." instance=ExtResource("5_bf5lq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15004, 0.0190599, -14.1432)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.09974, 0.115591, -19.8451)
 
 [node name="Remnant" parent="Remnant" index="0"]
 visible = false
@@ -271,8 +256,27 @@ collision_layer = 4
 collision_layer = 0
 
 [node name="Door" parent="." instance=ExtResource("5_bsd0c")]
-transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -5.45792)
+transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -10.3375)
+
+[node name="Door3" parent="." instance=ExtResource("5_bsd0c")]
+transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -10.3375)
+
+[node name="Door2" parent="." instance=ExtResource("5_bsd0c")]
+transform = Transform3D(1.01966, 0, -0.0111931, 0, 1, 0, 0.0114082, 0, 1.00044, 0.0751995, 0.00693905, -20.3204)
+
+[node name="House" parent="." instance=ExtResource("5_i571d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100883, 0, -19.3153)
+
+[node name="Bath" parent="House/Node" index="2"]
+transform = Transform3D(0, 0, -1, 0, 0.624904, 0, 1, 0, 0, -7.75, 0, 1.5)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(2.09126, 0, 0, 0, 1, 0, 0, 0, 1, 1.39247, 1.86605, -17.6943)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3644, 2.59588, -25.863)
 
 [editable path="Remnant"]
 [editable path="Remnant/Remnant"]
 [editable path="Remnant/Remnant/Interactable"]
+[editable path="House"]
