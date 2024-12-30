@@ -134,6 +134,17 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_o1o44")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gd8tn")
 text = "Exit Game"
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 1140.0
+offset_top = 695.0
+offset_right = 1762.0
+offset_bottom = 808.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 40
+text = "\"right-click\" for magnifying glass
+\"F\" for interact"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_wsayt")

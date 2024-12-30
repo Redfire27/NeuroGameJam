@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqyd1qpxgjhh3"
+uid="uid://cej3mcrqv55gs"
 path.s3tc="res://.godot/imported/Bat_0.png-a31651f267fb3bc397ac8060dbac87c2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "5531d58f2e8be226542743362fab58d4"
 }
 
 [deps]

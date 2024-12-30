@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr1mikei7v60r"]
+
+[ext_resource type="PackedScene" uid="uid://dsqc8kxvq3uy" path="res://Assets/Pistol.gltf" id="1_024qx"]
+[ext_resource type="PackedScene" uid="uid://l6rmbw5ifftv" path="res://Scenes/Interactable.tscn" id="2_h8ufm"]
+[ext_resource type="Script" path="res://Scripts/pistol.gd" id="2_kpbsb"]
+
+[node name="Pistol" type="Node3D"]
+
+[node name="Pistol" parent="." instance=ExtResource("1_024qx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.331898, 0, -0.239458)
+script = ExtResource("2_kpbsb")
+
+[node name="Interactable" parent="Pistol" instance=ExtResource("2_h8ufm")]
+
+[connection signal="interacted" from="Pistol/Interactable" to="Pistol" method="_on_interactable_interacted"]

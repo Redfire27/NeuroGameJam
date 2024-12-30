@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxij0574rmfue"]
+
+[ext_resource type="PackedScene" uid="uid://deas5xndbv22p" path="res://Assets/Evil.gltf" id="1_6oqkc"]
+[ext_resource type="PackedScene" uid="uid://l6rmbw5ifftv" path="res://Scenes/Interactable.tscn" id="2_57xp0"]
+[ext_resource type="Script" path="res://Scripts/evil.gd" id="2_t4gei"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k1pny"]
+size = Vector3(1, 1.07825, 0.984497)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Evil" parent="." instance=ExtResource("1_6oqkc")]
+transform = Transform3D(0.717585, 0, 0, 0, 0.684464, 0, 0, 0, 0.85717, 0.0815246, 0, 0.309108)
+script = ExtResource("2_t4gei")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Evil/Node" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Evil/Node/RigidBody3D"]
+transform = Transform3D(1.47927, 0, -1.29855e-08, 0, 3.46259, 0, 0, 0, 1.84424, 0, 1.71554, 0.0464003)
+shape = SubResource("BoxShape3D_k1pny")
+
+[node name="Interactable" parent="Evil" instance=ExtResource("2_57xp0")]
+
+[node name="RemnantText" type="Label3D" parent="Evil"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1.13497, 0, 8.74228e-08, 0, -1, 0, 3.6427, -0.286441)
+text = "Which one is the murder
+weapon ?"
+
+[connection signal="interacted" from="Evil/Interactable" to="Evil" method="_on_interactable_interacted"]
+
+[editable path="Evil"]

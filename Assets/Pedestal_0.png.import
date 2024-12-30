@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm5upeh3ygkx"
-path.s3tc="res://.godot/imported/Magnifying Glass Frame_0.png-55a89f8bf1587b56cac14f20bc86cf54.s3tc.ctex"
+uid="uid://c3ljrpcfmurue"
+path.s3tc="res://.godot/imported/Pedestal_0.png-e4223165cdc37c7f2b1b395dfe1d17f4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "60620337c80904f89f9125db81b6f820"
+}
 
 [deps]
 
-source_file="res://Assets/Magnifying Glass Frame_0.png"
-dest_files=["res://.godot/imported/Magnifying Glass Frame_0.png-55a89f8bf1587b56cac14f20bc86cf54.s3tc.ctex"]
+source_file="res://Assets/Pedestal_0.png"
+dest_files=["res://.godot/imported/Pedestal_0.png-e4223165cdc37c7f2b1b395dfe1d17f4.s3tc.ctex"]
 
 [params]
 
