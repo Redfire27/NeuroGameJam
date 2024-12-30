@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 
 	# Transform direction based on camera orientation
 	if input_direction != Vector3.ZERO:
+		
 		var direction = twist_pivot.basis * input_direction
 		direction = direction.normalized()
 		velocity.x = direction.x * speed

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtuefw1ydq1d6"]
+
+[ext_resource type="PackedScene" uid="uid://ounufqb5aec5" path="res://Assets/Bat.gltf" id="1_vey8e"]
+[ext_resource type="Script" path="res://Scripts/bat_true.gd" id="2_xn4n0"]
+[ext_resource type="PackedScene" uid="uid://l6rmbw5ifftv" path="res://Scenes/Interactable.tscn" id="3_gdxfm"]
+
+[node name="Bat_True" type="Node3D"]
+
+[node name="Bat" parent="." instance=ExtResource("1_vey8e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255115, 0, 0.00594139)
+script = ExtResource("2_xn4n0")
+
+[node name="Interactable" parent="Bat" instance=ExtResource("3_gdxfm")]
+
+[connection signal="interacted" from="Bat/Interactable" to="Bat" method="_on_interactable_interacted"]

@@ -1,10 +1,27 @@
-[gd_scene load_steps=21 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=39 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
+[ext_resource type="AudioStream" uid="uid://b2uljwkkvotvv" path="res://Music/Ambience.wav" id="2_ftlfw"]
+[ext_resource type="Script" path="res://Scripts/audiostreamplayer3d.gd" id="3_gagv6"]
 [ext_resource type="PackedScene" uid="uid://dw77j61rktp44" path="res://Scenes/blinds.tscn" id="3_wpm86"]
 [ext_resource type="PackedScene" uid="uid://v2hcq3ca47ev" path="res://Scenes/Remnant.tscn" id="5_bf5lq"]
 [ext_resource type="PackedScene" uid="uid://c43ksc84ia0vv" path="res://Scenes/door.tscn" id="5_bsd0c"]
 [ext_resource type="PackedScene" uid="uid://c8m5dswy3ehfv" path="res://Assets/Floor 1 (1).gltf" id="5_i571d"]
+[ext_resource type="Script" path="res://Scripts/bath.gd" id="6_0gltf"]
+[ext_resource type="PackedScene" uid="uid://l6rmbw5ifftv" path="res://Scenes/Interactable.tscn" id="7_jyyqa"]
+[ext_resource type="PackedScene" uid="uid://ounufqb5aec5" path="res://Assets/Bat.gltf" id="8_b87id"]
+[ext_resource type="PackedScene" uid="uid://b3jouhrpk56ku" path="res://Assets/Knife.gltf" id="9_tp1b1"]
+[ext_resource type="PackedScene" uid="uid://dsqc8kxvq3uy" path="res://Assets/Pistol.gltf" id="10_iso53"]
+[ext_resource type="Script" path="res://Scripts/pistol.gd" id="11_r8ht2"]
+[ext_resource type="PackedScene" uid="uid://duyauwwittyo2" path="res://Assets/Pedestal.gltf" id="12_mri4e"]
+[ext_resource type="PackedScene" path="res://Scenes/Evil.tscn" id="13_sxrmx"]
+[ext_resource type="PackedScene" uid="uid://c0jiysf2nvq16" path="res://Scenes/Neuro.tscn" id="14_52rx2"]
+[ext_resource type="Script" path="res://Scripts/evil_blame.gd" id="14_k33ic"]
+[ext_resource type="PackedScene" uid="uid://dr1mikei7v60r" path="res://Scenes/Pistol.tscn" id="15_g0v0w"]
+[ext_resource type="Script" path="res://Scripts/neuro_sama_blame.gd" id="15_n1c4j"]
+[ext_resource type="PackedScene" path="res://Scenes/bat_true.tscn" id="16_2bx5g"]
+[ext_resource type="PackedScene" uid="uid://not23y0r5l8w" path="res://Scenes/Knife.tscn" id="17_db1bj"]
+[ext_resource type="PackedScene" uid="uid://t4pyo5nphyl2" path="res://Scenes/Bat.tscn" id="18_dof6e"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -57,6 +74,138 @@ tracks/3/keys = {
 "update": 1,
 "values": [0, 2]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("bath_text:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("body_text:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("couch_text:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("bullet_text:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("bat_text:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("knife_text:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("pistol_text:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Remnant2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Remnant3:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Remnant4:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("evil_blame:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.59, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_1j2ho"]
 length = 0.001
@@ -108,6 +257,138 @@ tracks/3/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("bath_text:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("body_text:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("couch_text:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("bullet_text:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("bat_text:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("knife_text:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("pistol_text:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Remnant2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Remnant3:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Remnant4:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("evil_blame:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yaxmb"]
 _data = {
@@ -156,6 +437,8 @@ size = Vector3(1, 1, 1.38489)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nktyt"]
 size = Vector3(1.47656, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yqpu1"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -240,13 +523,20 @@ shape = SubResource("BoxShape3D_nktyt")
 [node name="Player" parent="." instance=ExtResource("1_jcsdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -11.0828)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player"]
+stream = ExtResource("2_ftlfw")
+autoplay = true
+script = ExtResource("3_gagv6")
+
 [node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
 transform = Transform3D(-0.999971, 0, -0.00764449, 0, 1, 0, 0.00764449, 0, -0.999971, -0.454709, -0.00827742, -12.3887)
 
 [node name="Remnant" parent="." instance=ExtResource("5_bf5lq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.09974, 0.115591, -19.8451)
+transform = Transform3D(0.689126, 0, -0.724641, 0, 1, 0, 0.724641, 0, 0.689126, 4.27465, 0.0701857, -19.6972)
+metadata/_edit_group_ = true
 
 [node name="Remnant" parent="Remnant" index="0"]
+transform = Transform3D(-0.571993, 0, -0.00276465, 0, 0.687, 0, 0.00274545, 0, -0.575993, -0.0230047, 0, -0.190936)
 visible = false
 
 [node name="RigidBody3D" parent="Remnant/Remnant/Node" index="3"]
@@ -255,11 +545,57 @@ collision_layer = 4
 [node name="Interactable" parent="Remnant/Remnant" index="2"]
 collision_layer = 0
 
+[node name="RemnantText" parent="Remnant/Remnant" index="3"]
+text = "Gunshots sounds are followed by a deafening clang sound 
+and two separate thump sounds,
+ one much louder than the other."
+font_size = 20
+
+[node name="Remnant2" parent="." instance=ExtResource("5_bf5lq")]
+transform = Transform3D(1, 0, -0.000261784, 0, 1, 0, 0.000261784, 0, 1, 0.955125, 0.108319, -14.0865)
+visible = false
+
+[node name="Remnant" parent="Remnant2" index="0"]
+transform = Transform3D(-0.571993, 0, -0.00276465, 0, 0.687, 0, 0.00274545, 0, -0.575993, -0.0230047, 0, -0.190936)
+
+[node name="RemnantText" parent="Remnant2/Remnant" index="3"]
+text = "The killer chasing after 
+you through the hallway."
+font_size = 20
+
+[node name="Remnant3" parent="." instance=ExtResource("5_bf5lq")]
+transform = Transform3D(0.832322, 0, 0.554293, 0, 1, 0, -0.554293, 0, 0.832322, 0.690214, 0.0821576, -26.6424)
+visible = false
+metadata/_edit_group_ = true
+
+[node name="Remnant" parent="Remnant3" index="0"]
+transform = Transform3D(-0.571993, 0, -0.00276465, 0, 0.687, 0, 0.00274545, 0, -0.575993, -0.0230047, 0, -0.190936)
+
+[node name="RemnantText" parent="Remnant3/Remnant" index="3"]
+text = "The silhouette of the killer is visible,
+ constantly plunging the knife down.
+ Every stab is accompanied with a cachofany of laughs
+ and splatters of blood."
+font_size = 20
+
+[node name="Remnant4" parent="." instance=ExtResource("5_bf5lq")]
+transform = Transform3D(0.344256, -0.00986248, 0.938824, 0.0286369, 0.99959, 0, -0.938439, 0.026885, 0.344397, -4.86915, 0.104115, -19.1269)
+visible = false
+metadata/_edit_group_ = true
+
+[node name="Remnant" parent="Remnant4" index="0"]
+transform = Transform3D(-0.571993, 0, -0.00276465, 0, 0.687, 0, 0.00274545, 0, -0.575993, -0.0230047, 0, -0.190936)
+
+[node name="RemnantText" parent="Remnant4/Remnant" index="3"]
+text = "Sounds of washing and scrubbing
+ come from the bathtub."
+font_size = 20
+
 [node name="Door" parent="." instance=ExtResource("5_bsd0c")]
 transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -10.3375)
 
 [node name="Door3" parent="." instance=ExtResource("5_bsd0c")]
-transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -10.3375)
+transform = Transform3D(0.018834, 0, 1.00083, 0, 1.5, 0, -1.01983, 0, 0.0184831, -0.899756, -0.00591266, -17.3258)
 
 [node name="Door2" parent="." instance=ExtResource("5_bsd0c")]
 transform = Transform3D(1.01966, 0, -0.0111931, 0, 1, 0, 0.0114082, 0, 1.00044, 0.0751995, 0.00693905, -20.3204)
@@ -269,14 +605,231 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100883, 0, -19.3153)
 
 [node name="Bath" parent="House/Node" index="2"]
 transform = Transform3D(0, 0, -1, 0, 0.624904, 0, 1, 0, 0, -7.75, 0, 1.5)
+script = ExtResource("6_0gltf")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(2.09126, 0, 0, 0, 1, 0, 0, 0, 1, 1.39247, 1.86605, -17.6943)
+[node name="Interactable" parent="House/Node/Bath" index="1" instance=ExtResource("7_jyyqa")]
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3644, 2.59588, -25.863)
+[node name="bath_text" type="Label3D" parent="."]
+transform = Transform3D(0.366501, 0, 0.930418, 0, 1, 0, -0.930418, 0, 0.366501, -7.54279, 1.56014, -18.1319)
+visible = false
+text = "Some blood has been washed off
+ in this bath tub.
+ The remaining blood has stained the tub."
+font_size = 26
+
+[node name="body_text" type="Label3D" parent="."]
+transform = Transform3D(0.665113, 0, -0.746743, 0, 1, 0, 0.746743, 0, 0.665113, 4.60608, 1.42837, -25.2091)
+text = "This is your body; 
+there are various stab wounds and blood splatters all over the body. 
+There are also marks of blunt force trauma on the head."
+font_size = 25
+
+[node name="couch_text" type="Label3D" parent="."]
+transform = Transform3D(-0.986743, 0, 0.162293, 0, 1, 0, -0.162293, 0, -0.986743, 2.70889, 1.43148, -15.6036)
+visible = false
+text = "The couch is stained in blood; 
+the blood has already dried up."
+font_size = 26
+
+[node name="bullet_text" type="Label3D" parent="."]
+transform = Transform3D(-0.798152, 0, -0.602456, 0, 1, 0, 0.602456, 0, -0.798152, 5.40765, 0.44452, -16.1877)
+visible = false
+text = "There are three empty casings 
+on the ground as well as two bullet holes in the wall
+ and one through the window."
+font_size = 10
+
+[node name="baseball_bat" parent="." instance=ExtResource("8_b87id")]
+transform = Transform3D(0.966734, 0.210435, 0.145403, -0.171268, 0.110332, 0.979027, 0.189979, -0.971362, 0.142702, 2.02613, 0.0609013, -28.2872)
+
+[node name="bat_text" type="Label3D" parent="."]
+transform = Transform3D(0.178001, 0.0206827, -0.983813, -0.027674, 0.999489, 0.0160053, 0.983641, 0.024377, 0.178482, 2.04294, 0.175105, -27.9134)
+visible = false
+text = "The baseball bat lays hidden by the bed;
+ it is slightly wet and the carpet by it is likewise quite damp."
+font_size = 10
+
+[node name="knife" parent="." instance=ExtResource("9_tp1b1")]
+transform = Transform3D(-0.0247025, 0.705877, -0.707903, 0.999131, 0.0412043, 0.00622135, 0.0335601, -0.707135, -0.706282, 7.44125, 1.01846, -18.6965)
+
+[node name="knife_text" type="Label3D" parent="."]
+transform = Transform3D(-0.00190231, 0, -0.999998, 0, 1, 0, 0.999998, 0, -0.00190231, 8.35265, 1.24504, -18.7185)
+visible = false
+text = "A blooded knife has been left on the counter top;
+the blood is still quite fresh."
+font_size = 10
+
+[node name="pistol" parent="." instance=ExtResource("10_iso53")]
+transform = Transform3D(0.05007, 0.883268, 0.466187, -0.998746, 0.0442808, 0.0233713, 1.86265e-09, -0.466773, 0.884377, 6.64806, 0.0712469, -20.2208)
+script = ExtResource("11_r8ht2")
+
+[node name="pistol_text" type="Label3D" parent="."]
+transform = Transform3D(0.625215, 0, -0.780452, 0, 1, 0, 0.780452, 0, 0.625215, 6.98136, 0.429922, -20.3265)
+visible = false
+text = "A gun is set by the fridge;
+ the gun has three bullets missing
+ and the fridge has a slight dent on it."
+font_size = 10
+
+[node name="pedestal1" parent="." instance=ExtResource("12_mri4e")]
+transform = Transform3D(1, 0, 0, 0, 0.639616, 0, 0, 0, 1, 11, 0.02, 0)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pedestal1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedestal1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 2.13622, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yqpu1")
+
+[node name="pedestal6" parent="." instance=ExtResource("12_mri4e")]
+transform = Transform3D(1, 0, 0, 0, 0.639616, 0, 0, 0, 1, 11, 0.02, -2)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pedestal6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedestal6/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 2.13622, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yqpu1")
+
+[node name="pedestal5" parent="." instance=ExtResource("12_mri4e")]
+transform = Transform3D(1, 0, 0, 0, 0.639616, 0, 0, 0, 1, 11, 0.02, 2)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pedestal5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedestal5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 2.13622, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yqpu1")
+
+[node name="pedestal4" parent="." instance=ExtResource("12_mri4e")]
+transform = Transform3D(1, 0, 0, 0, 0.639616, 0, 0, 0, 1, -11, 0.02, 0)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pedestal4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedestal4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 2.13622, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yqpu1")
+
+[node name="pedestal3" parent="." instance=ExtResource("12_mri4e")]
+transform = Transform3D(1, 0, 0, 0, 0.639616, 0, 0, 0, 1, -11, 0.02, -2)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pedestal3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedestal3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 2.13622, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yqpu1")
+
+[node name="pedestal2" parent="." instance=ExtResource("12_mri4e")]
+transform = Transform3D(1, 0, 0, 0, 0.639616, 0, 0, 0, 1, -11, 0.02, 2)
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="pedestal2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedestal2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 2.13622, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_yqpu1")
+
+[node name="evil" parent="." instance=ExtResource("13_sxrmx")]
+transform = Transform3D(0.503988, 0, 0.272411, 0, 0.687, 0, -0.270519, 0, 0.507512, 9.34117, 0.0197463, 3.95778)
+
+[node name="evil_blame" parent="." instance=ExtResource("13_sxrmx")]
+transform = Transform3D(0.503988, 0, 0.272411, 0, 0.687, 0, -0.270519, 0, 0.507512, 0.0425127, 0.0197466, -17.1686)
+visible = false
+
+[node name="Evil" parent="evil_blame" index="0"]
+transform = Transform3D(0.38654, 0, 0.722181, 0, 0.684464, 0, -0.604578, 0, 0.46173, 13.5793, 0, -5.42405)
+script = ExtResource("14_k33ic")
+
+[node name="RemnantText" parent="evil_blame/Evil" index="3"]
+text = "It must be her! 
+She always has that creepy laugh!"
+
+[node name="neuro" parent="." instance=ExtResource("14_52rx2")]
+transform = Transform3D(0.50234, 0, -0.275479, 0, 0.587, 0, 0.273566, 0, 0.505853, -9.54621, 0.0197468, 3.7141)
+
+[node name="neuro_blame" parent="." instance=ExtResource("14_52rx2")]
+transform = Transform3D(-0.570627, 0, 0.0398789, 0, 0.587, 0, -0.0396019, 0, -0.574618, 1.88997, 0.0066972, -20.2285)
+
+[node name="Neuro" parent="neuro_blame" index="0"]
+script = ExtResource("15_n1c4j")
+
+[node name="RemnantText" parent="neuro_blame/Neuro" index="3"]
+text = "Her name is Evil!
+Its obviously her!"
+font_size = 26
+
+[node name="Pistol" parent="." instance=ExtResource("15_g0v0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0914, 0.703181, 2.19704)
+
+[node name="Bat_True" parent="." instance=ExtResource("16_2bx5g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1739, 0.703181, -0.0231329)
+
+[node name="Knife" parent="." instance=ExtResource("17_db1bj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9272, 0.703181, -2.01294)
+
+[node name="Knife2" parent="." instance=ExtResource("17_db1bj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8526, 0.703181, -1.97157)
+
+[node name="Pistol2" parent="." instance=ExtResource("15_g0v0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6026, 0.703181, 2.12143)
+
+[node name="Bat" parent="." instance=ExtResource("18_dof6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6697, 0.703181, -0.013588)
+
+[node name="Killer_text" type="Label3D" parent="."]
+transform = Transform3D(-0.999991, -0.000126944, -0.0042522, -0.000120535, 0.999999, -0.0015068, 0.0042524, -0.00150627, -0.99999, -0.015036, 1.51214, 0.171326)
+text = "Uncover the truth: identify the real killer
+ and the weapon of their crime
+But choose wisely !"
+font_size = 53
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 2.18604, 2.55592, -18.0259)
+light_color = Color(1, 0.773148, 0.532934, 1)
+light_energy = 3.424
+spot_angle = 60.4114
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, -4.53197, 2.47124, -17.8299)
+light_color = Color(1, 0.773148, 0.532934, 1)
+light_energy = 3.424
+spot_angle = 60.4114
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 0.0976608, 2.58249, -12.3825)
+light_color = Color(1, 0.773148, 0.532934, 1)
+light_energy = 3.424
+spot_angle = 60.4114
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 3.3996, 2.51298, -26.0774)
+light_color = Color(1, 0.773148, 0.532934, 1)
+light_energy = 3.424
+spot_angle = 60.4114
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 7.46579, 2.53933, -18.1222)
+light_color = Color(1, 0.773148, 0.532934, 1)
+light_energy = 3.424
+spot_angle = 60.4114
 
 [editable path="Remnant"]
 [editable path="Remnant/Remnant"]
 [editable path="Remnant/Remnant/Interactable"]
+[editable path="Remnant2"]
+[editable path="Remnant2/Remnant"]
+[editable path="Remnant3"]
+[editable path="Remnant3/Remnant"]
+[editable path="Remnant4"]
+[editable path="Remnant4/Remnant"]
 [editable path="House"]
+[editable path="pistol"]
+[editable path="evil"]
+[editable path="evil/Evil"]
+[editable path="evil_blame"]
+[editable path="evil_blame/Evil"]
+[editable path="neuro_blame"]
+[editable path="neuro_blame/Neuro"]
+[editable path="Pistol"]

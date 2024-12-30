@@ -13,9 +13,9 @@ func _on_interactable_interacted(interactor: Interactor) -> void:
 
 # Play the open animation
 func open() -> void:
-	pass
+	remnant_text.visible = not remnant_text.visible
 
 # Play the close animation
 func close() -> void:
-	pass
+	remnant_text.visible = not remnant_text.visible
 	
