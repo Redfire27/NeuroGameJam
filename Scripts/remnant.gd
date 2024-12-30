@@ -5,10 +5,8 @@ var is_open: bool = false
 
 # Called when the interactable item is interacted with
 func _on_interactable_interacted(interactor: Interactor) -> void:
-	if is_open:
-		close()
-	else:
-		open()
+	if Input.is_action_just_pressed("interact"):
+		remnant_text.visible = not remnant_text.visible
 	
 	# Toggle the state
 	is_open = !is_open
@@ -21,6 +19,3 @@ func open() -> void:
 func close() -> void:
 	pass
 	
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("interact"):
-		remnant_text.visible = not remnant_text.visible

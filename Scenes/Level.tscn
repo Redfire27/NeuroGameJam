@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=21 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
 [ext_resource type="PackedScene" uid="uid://d16rbxedqhh8i" path="res://Assets/Floor 1.gltf" id="2_oh3hs"]
@@ -45,6 +45,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Remnant/Remnant/Interactable:collision_layer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
 
 [sub_resource type="Animation" id="Animation_1j2ho"]
 length = 0.001
@@ -84,6 +96,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Remnant/Remnant/Interactable:collision_layer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yaxmb"]
 _data = {
@@ -110,10 +134,28 @@ glow_blend_mode = 0
 volumetric_fog_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_iauqo"]
-size = Vector2(30, 10)
+size = Vector2(30, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qwi6s"]
 data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0, -5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ck3vu"]
+size = Vector2(40, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1of3x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6lsqt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2aa4k"]
+size = Vector3(1, 1.24597, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_thw14"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ebg7"]
+size = Vector3(1, 1, 1.38489)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nktyt"]
+size = Vector3(1.47656, 1, 1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -130,13 +172,70 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0179369, 0)
 mesh = SubResource("PlaneMesh_iauqo")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-transform = Transform3D(2.99369, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(2.99369, 0, 0, 0, 1, 0, 0, 0, 2.00223, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_qwi6s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-1.12582, 0, 0.00819394, 0, 1.12585, 0, -0.00819394, 0, -1.12582, 0.602638, 3.88121, 10.0507)
+visible = false
+mesh = SubResource("QuadMesh_ck3vu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(36.0909, 0, 0, 0, 22.2794, 0, 0, 0, 0.926455, 0, 0, 0)
+shape = SubResource("BoxShape3D_1of3x")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-0.00603878, 0, -0.999982, 0, 1, 0, 0.999982, 0, -0.00603878, 15.3249, 3.88121, -0.189577)
+visible = false
+mesh = SubResource("QuadMesh_ck3vu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D2"]
+transform = Transform3D(1, 0, -4.65661e-10, 0, 1, 0, 4.65661e-10, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(22.3721, 0, -9.31323e-10, 0, 12.3613, 0, 0, 0, 0.937641, 0, 0, 0)
+shape = SubResource("BoxShape3D_6lsqt")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.0325097, 0, 0.999471, 0, 1, 0, -0.999471, 0, 0.0325097, -14.8962, 3.88121, -0.189577)
+visible = false
+mesh = SubResource("QuadMesh_ck3vu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(21.968, 0, 0, 0, 14.3444, 0, -5.96046e-08, 0, 0.745196, 0, 1.76416, 0)
+shape = SubResource("BoxShape3D_2aa4k")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-6.7273, 0.00244624, -0.000122325, -2.97085e-09, 0.0095713, 5.46851, 0.0160855, 1.02309, -0.0511592, -8.39665, 1.04321, -9.9732)
+visible = false
+mesh = SubResource("PlaneMesh_thw14")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D4/StaticBody3D"]
+transform = Transform3D(1.97001, -1.16415e-10, -4.36557e-11, 0, 1.00021, -5.21541e-08, 2.29193e-10, 1.07102e-08, 1.2713, 2.38419e-07, 0, 0.192448)
+shape = SubResource("BoxShape3D_3ebg7")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-6.7273, 0.00244624, -0.000122325, -2.97085e-09, 0.0095713, 5.46851, 0.0160855, 1.02309, -0.0511592, 13.3845, 1.04321, -9.9732)
+visible = false
+mesh = SubResource("PlaneMesh_thw14")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D5/StaticBody3D"]
+transform = Transform3D(1.66526, -2.91038e-11, -1.49157e-10, -1.86265e-09, 1.00817, 1.78814e-07, 3.63798e-12, 1.14087e-08, 2.0454, -0.238281, 1.90735e-06, 0)
+shape = SubResource("BoxShape3D_nktyt")
 
 [node name="Player" parent="." instance=ExtResource("1_jcsdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -5.827)
@@ -168,8 +267,12 @@ visible = false
 [node name="RigidBody3D" parent="Remnant/Remnant/Node" index="3"]
 collision_layer = 4
 
+[node name="Interactable" parent="Remnant/Remnant" index="2"]
+collision_layer = 0
+
 [node name="Door" parent="." instance=ExtResource("5_bsd0c")]
 transform = Transform3D(-1.0194, 0, -0.0253695, 0, 1, 0, 0.025857, 0, -1.00018, 1.11387, 0.0629642, -5.45792)
 
 [editable path="Remnant"]
 [editable path="Remnant/Remnant"]
+[editable path="Remnant/Remnant/Interactable"]
