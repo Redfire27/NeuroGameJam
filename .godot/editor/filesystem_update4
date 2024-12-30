@@ -1,5 +1,6 @@
-res://Scenes/player.tscn
-res://Scripts/Player.gd
-res://Scenes/World.tscn
 res://Scenes/Level.tscn
-res://player.gdshader
+res://Scenes/start_menu.tscn
+res://Scenes/player.tscn
+res://Scenes/door.tscn
+res://Scenes/Remnant.tscn
+res://Scenes/blinds.tscn
