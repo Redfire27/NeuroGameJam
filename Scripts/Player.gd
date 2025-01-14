@@ -6,6 +6,7 @@ var twist_input := 0.0
 # Vertical mouse
 var pitch_input := 0.0
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var twist_pivot := $TwistPivot
 @onready var pitch_pivot := $TwistPivot/PitchPivot
 @onready var animation_player: AnimationPlayer = $TwistPivot/PitchPivot/Camera3D/AnimationPlayer
@@ -28,10 +29,16 @@ func _physics_process(delta: float) -> void:
 		0.0,
 		Input.get_axis("move_forward", "move_backward")
 	)
+	
 	input_direction = input_direction.normalized()
-
+	if input_direction != Vector3.ZERO and !audio_stream_player.is_playing():
+		audio_stream_player.play()
+	elif input_direction == Vector3.ZERO and audio_stream_player.is_playing():
+		audio_stream_player.stop()
+		
 	# Transform direction based on camera orientation
 	if input_direction != Vector3.ZERO:
+		
 		var direction = twist_pivot.basis * input_direction
 		direction = direction.normalized()
 		velocity.x = direction.x * speed
@@ -83,3 +90,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			twist_input = -event.relative.x * mouse_sensitivity
 			pitch_input = -event.relative.y * mouse_sensitivity
+			

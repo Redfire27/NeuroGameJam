@@ -73,6 +73,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:h_offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_uyoq6"]
 resource_name = "Remnant_scene"
@@ -169,7 +181,7 @@ shape = SubResource("ConvexPolygonShape3D_ilxrq")
 [node name="PitchPivot" type="Node3D" parent="TwistPivot"]
 
 [node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00398612, -5.96046e-08, -0.00130343)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004, 0.2, -0.001)
 current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TwistPivot/PitchPivot/Camera3D"]

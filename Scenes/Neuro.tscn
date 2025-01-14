@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0jiysf2nvq16"]
+
+[ext_resource type="PackedScene" uid="uid://cyoqugfe7w7td" path="res://Assets/Neuro sama.gltf" id="1_y3b6d"]
+[ext_resource type="PackedScene" uid="uid://l6rmbw5ifftv" path="res://Scenes/Interactable.tscn" id="2_bny8y"]
+[ext_resource type="Script" path="res://Scripts/neuro_sama.gd" id="2_t201x"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jye8q"]
+size = Vector3(1, 1.07825, 0.984497)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Neuro" parent="." instance=ExtResource("1_y3b6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0172924, 0, 0.0971158)
+script = ExtResource("2_t201x")
+
+[node name="Node" parent="Neuro" index="0"]
+transform = Transform3D(0.831066, 0, 0, 0, 0.741571, 0, 0, 0, 1.00045, 0, 0, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Neuro/Node" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Neuro/Node/RigidBody3D"]
+transform = Transform3D(1.47927, 0, -1.29855e-08, 0, 3.46259, 0, 0, 0, 1.84424, 0, 1.71554, 0.0464003)
+shape = SubResource("BoxShape3D_jye8q")
+
+[node name="AnimationPlayer" parent="Neuro" index="1"]
+speed_scale = 0.6
+
+[node name="Interactable" parent="Neuro" instance=ExtResource("2_bny8y")]
+
+[node name="RemnantText" type="Label3D" parent="Neuro"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1.13497, 0, 8.74228e-08, 0, -1, 0, 2.74479, -0.286441)
+text = "Which one is the murder
+weapon ?"
+
+[connection signal="interacted" from="Neuro/Interactable" to="Neuro" method="_on_interactable_interacted"]
+
+[editable path="Neuro"]
