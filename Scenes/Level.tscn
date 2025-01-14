@@ -1,8 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://dk4q078mm71r4"]
+[gd_scene load_steps=43 format=3 uid="uid://dk4q078mm71r4"]
 
 [ext_resource type="PackedScene" uid="uid://dn52mxcun7uhb" path="res://Scenes/player.tscn" id="1_jcsdg"]
 [ext_resource type="AudioStream" uid="uid://b2uljwkkvotvv" path="res://Music/Ambience.wav" id="2_ftlfw"]
+[ext_resource type="AudioStream" uid="uid://cxnydau2ia8j3" path="res://Music/Footsteps.wav" id="2_ojky2"]
 [ext_resource type="Script" path="res://Scripts/audiostreamplayer3d.gd" id="3_gagv6"]
+[ext_resource type="Script" path="res://Scenes/Footsteps.gd" id="3_vrrql"]
 [ext_resource type="PackedScene" uid="uid://dw77j61rktp44" path="res://Scenes/blinds.tscn" id="3_wpm86"]
 [ext_resource type="PackedScene" uid="uid://v2hcq3ca47ev" path="res://Scenes/Remnant.tscn" id="5_bf5lq"]
 [ext_resource type="PackedScene" uid="uid://c43ksc84ia0vv" path="res://Scenes/door.tscn" id="5_bsd0c"]
@@ -14,14 +16,16 @@
 [ext_resource type="PackedScene" uid="uid://dsqc8kxvq3uy" path="res://Assets/Pistol.gltf" id="10_iso53"]
 [ext_resource type="Script" path="res://Scripts/pistol.gd" id="11_r8ht2"]
 [ext_resource type="PackedScene" uid="uid://duyauwwittyo2" path="res://Assets/Pedestal.gltf" id="12_mri4e"]
-[ext_resource type="PackedScene" path="res://Scenes/Evil.tscn" id="13_sxrmx"]
+[ext_resource type="PackedScene" uid="uid://cxij0574rmfue" path="res://Scenes/Evil.tscn" id="13_sxrmx"]
 [ext_resource type="PackedScene" uid="uid://c0jiysf2nvq16" path="res://Scenes/Neuro.tscn" id="14_52rx2"]
 [ext_resource type="Script" path="res://Scripts/evil_blame.gd" id="14_k33ic"]
 [ext_resource type="PackedScene" uid="uid://dr1mikei7v60r" path="res://Scenes/Pistol.tscn" id="15_g0v0w"]
 [ext_resource type="Script" path="res://Scripts/neuro_sama_blame.gd" id="15_n1c4j"]
-[ext_resource type="PackedScene" path="res://Scenes/bat_true.tscn" id="16_2bx5g"]
+[ext_resource type="PackedScene" uid="uid://dtuefw1ydq1d6" path="res://Scenes/bat_true.tscn" id="16_2bx5g"]
 [ext_resource type="PackedScene" uid="uid://not23y0r5l8w" path="res://Scenes/Knife.tscn" id="17_db1bj"]
 [ext_resource type="PackedScene" uid="uid://t4pyo5nphyl2" path="res://Scenes/Bat.tscn" id="18_dof6e"]
+[ext_resource type="AudioStream" uid="uid://ctyvxeydfu13r" path="res://Music/Rising Tensions.wav" id="23_u00qh"]
+[ext_resource type="Script" path="res://Scenes/Music.gd" id="24_fccvg"]
 
 [sub_resource type="Animation" id="Animation_s0mxj"]
 resource_name = "Fog"
@@ -407,12 +411,34 @@ sky_material = SubResource("ProceduralSkyMaterial_dpnjt")
 background_mode = 2
 sky = SubResource("Sky_yhtxd")
 tonemap_mode = 2
+tonemap_exposure = 0.42
+tonemap_white = 1.48
+ssao_enabled = true
+ssil_enabled = true
+ssil_radius = 1.18
+ssil_intensity = 3.39
+ssil_sharpness = 1.0
+ssil_normal_rejection = 0.88
 sdfgi_enabled = true
+sdfgi_use_occlusion = true
 sdfgi_read_sky_light = false
 glow_enabled = true
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 1.0
+glow_levels/6 = 1.0
+glow_levels/7 = 1.0
 glow_normalized = true
 glow_blend_mode = 0
+fog_enabled = true
 volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.658875, 0.392503, 0.262985, 1)
+volumetric_fog_emission = Color(0.127405, 0.0774263, 0.0147325, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_gi_inject = 1.23
+volumetric_fog_length = 48.72
+volumetric_fog_detail_spread = 1.93187
+volumetric_fog_ambient_inject = 1.09
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_iauqo"]
 size = Vector2(30, 20)
@@ -523,10 +549,12 @@ shape = SubResource("BoxShape3D_nktyt")
 [node name="Player" parent="." instance=ExtResource("1_jcsdg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499537, 1.89374, -11.0828)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player"]
-stream = ExtResource("2_ftlfw")
-autoplay = true
-script = ExtResource("3_gagv6")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("2_ojky2")
+volume_db = -21.549
+mix_target = 2
+bus = &"Ambience"
+script = ExtResource("3_vrrql")
 
 [node name="Blinds" parent="." instance=ExtResource("3_wpm86")]
 transform = Transform3D(-0.999971, 0, -0.00764449, 0, 1, 0, 0.00764449, 0, -0.999971, -0.454709, -0.00827742, -12.3887)
@@ -608,6 +636,9 @@ transform = Transform3D(0, 0, -1, 0, 0.624904, 0, 1, 0, 0, -7.75, 0, 1.5)
 script = ExtResource("6_0gltf")
 
 [node name="Interactable" parent="House/Node/Bath" index="1" instance=ExtResource("7_jyyqa")]
+
+[node name="sphere" parent="House/Node/Light" index="0"]
+cast_shadow = 0
 
 [node name="bath_text" type="Label3D" parent="."]
 transform = Transform3D(0.366501, 0, 0.930418, 0, 1, 0, -0.930418, 0, 0.366501, -7.54279, 1.56014, -18.1319)
@@ -786,34 +817,87 @@ But choose wisely !"
 font_size = 53
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 2.18604, 2.55592, -18.0259)
-light_color = Color(1, 0.773148, 0.532934, 1)
-light_energy = 3.424
-spot_angle = 60.4114
+transform = Transform3D(0.363839, 0.85913, 0.359885, -0.3208, -0.247151, 0.914332, 0.874476, -0.448121, 0.185686, 2.1918, 2.89929, -18.0691)
+light_color = Color(0.999999, 0.616914, 0.460134, 1)
+light_energy = 4.485
+light_size = 1.0
+spot_range = 5.4564
+spot_angle = 45.8398
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, -4.53197, 2.47124, -17.8299)
-light_color = Color(1, 0.773148, 0.532934, 1)
+light_color = Color(0.811118, 0.824891, 0.828884, 1)
 light_energy = 3.424
 spot_angle = 60.4114
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
-transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 0.0976608, 2.58249, -12.3825)
-light_color = Color(1, 0.773148, 0.532934, 1)
+transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 0.0976608, 2.88973, -12.3825)
+light_color = Color(0.887833, 0.550061, 9.81867e-06, 1)
 light_energy = 3.424
+light_volumetric_fog_energy = 1.97
+spot_range = 4.22442
 spot_angle = 60.4114
 
 [node name="SpotLight3D5" type="SpotLight3D" parent="."]
-transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 3.3996, 2.51298, -26.0774)
-light_color = Color(1, 0.773148, 0.532934, 1)
-light_energy = 3.424
-spot_angle = 60.4114
+transform = Transform3D(0.438529, 0.891631, -0.112632, 0.11392, 0.0691656, 0.991079, 0.891468, -0.447448, -0.0712435, 3.41046, 2.40214, -26.0447)
+light_color = Color(0.796078, 0.482353, 0.133333, 1)
+light_energy = 4.0
+light_indirect_energy = 4.071
+light_volumetric_fog_energy = 1.162
+shadow_enabled = true
+shadow_blur = 1.202
+spot_range = 5.10177
+spot_attenuation = 1.41
+spot_angle = 73.2982
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
-transform = Transform3D(0.419278, 0.906336, -0.0525447, 0, 0.0578777, 0.998324, 0.907858, -0.418575, 0.0242668, 7.46579, 2.53933, -18.1222)
-light_color = Color(1, 0.773148, 0.532934, 1)
-light_energy = 3.424
-spot_angle = 60.4114
+transform = Transform3D(0.419278, 0.906336, -0.0525447, -0.169898, 0.135188, 0.976145, 0.891819, -0.400349, 0.210666, 7.49684, 2.91782, -18.03)
+light_color = Color(0.870588, 0.572549, 0.305882, 1)
+light_energy = 4.0
+light_size = 1.0
+light_specular = 0.0
+spot_range = 4.06824
+spot_angle = 38.2605
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="."]
+transform = Transform3D(0.865054, 0.206249, 0.457322, -0.314309, -0.487686, 0.814477, 0.391015, -0.848307, -0.357048, 7.11256, 3.802, -15.3417)
+light_color = Color(0.335493, 0.355467, 0.278603, 1)
+light_energy = 0.8
+distance_fade_enabled = true
+distance_fade_begin = 0.0
+spot_range = 4.26158
+spot_attenuation = -3.95
+spot_angle = 31.4664
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.656176, 0.561027, 0.50466, 0.159054, -0.55092, 0.819261, 0.737655, 0.617847, 0.272267, 4.67605, 1.82726, -15.8054)
+light_color = Color(0.923516, 0.249143, 0.339758, 1)
+light_energy = 4.048
+light_indirect_energy = 1.152
+shadow_enabled = true
+shadow_opacity = 0.85
+spot_range = 1.77122
+spot_attenuation = 1.83
+spot_angle = 47.6005
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_u00qh")
+volume_db = -4.685
+autoplay = true
+bus = &"Music"
+script = ExtResource("24_fccvg")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.72247, 1.45989, -18.231)
+stream = ExtResource("2_ftlfw")
+volume_db = 80.0
+unit_size = 12.7
+max_db = 6.0
+autoplay = true
+max_distance = 12.0
+panning_strength = 0.65
+bus = &"Ambience"
+script = ExtResource("3_gagv6")
 
 [editable path="Remnant"]
 [editable path="Remnant/Remnant"]
