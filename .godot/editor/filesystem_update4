@@ -1,3 +1,6 @@
 res://default_bus_layout.tres
 res://Scenes/Level.tscn
+res://Scenes/Music.gd
+res://Scripts/Player.gd
+res://Scenes/Footsteps.gd
 res://Scenes/player.tscn
